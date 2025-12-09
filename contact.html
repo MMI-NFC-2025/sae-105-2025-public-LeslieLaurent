@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Les rives du territoire</title>
+    <link rel="stylesheet" href="contact.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="header-left">
+                <div class="logo-icon"></div>
+                <h1>Contact</h1>
+            </div>
+            <button class="menu-btn"></button>
+        </header>
+
+        <div class="content">
+            <div class="hero-section">
+                <div class="hero-icon"></div>
+                <h2 class="hero-title">Contactez-nous</h2>
+                <p class="hero-text">Nous sommes là pour vous aider. N'hésitez pas à nous contacter pour toute question ou demande.</p>
+            </div>
+
+            <section class="form-section">
+                <h3 class="section-title">
+                    <span class="title-icon"></span>
+                    Envoyez-nous un message
+                </h3>
+
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <label for="name">Nom complet</label>
+                        <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" placeholder="votre@email.com" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="subject">Sujet</label>
+                        <select id="subject" name="subject" required>
+                            <option value="">Choisir un sujet</option>
+                            <option value="information">Demande d'information</option>
+                            <option value="billetterie">Billetterie</option>
+                            <option value="artistes">Programme et artistes</option>
+                            <option value="acces">Accès et transport</option>
+                            <option value="hebergement">Hébergement</option>
+                            <option value="partenariat">Partenariat</option>
+                            <option value="presse">Presse et média</option>
+                            <option value="autre">Autre</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" name="message" rows="6" placeholder="Décrivez votre demande en détail..." required></textarea>
+                    </div>
+
+                    <button type="submit" class="submit-btn">
+                        <span class="btn-icon"></span>
+                        Envoyer le message
+                    </button>
+                </form>
+            </section>
+
+            <section class="info-section">
+                <h3 class="section-title">
+                    <span class="title-icon"></span>
+                    Nos coordonnées
+                </h3>
+
+                <div class="info-cards">
+                    <div class="info-card">
+                        <div class="info-icon email-icon"></div>
+                        <div class="info-content">
+                            <h4 class="info-title">Email</h4>
+                            <p class="info-detail">contact@rivesduterritoire.fr</p>
+                            <p class="info-detail">support@rivesduterritoire.fr</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon phone-icon"></div>
+                        <div class="info-content">
+                            <h4 class="info-title">Téléphone</h4>
+                            <p class="info-detail">+33 1 23 45 67 89</p>
+                            <p class="info-sub">Lun-Ven 9h-18h</p>
+                        </div>
+                    </div>
+
+                    <div class="info-card">
+                        <div class="info-icon location-icon"></div>
+                        <div class="info-content">
+                            <h4 class="info-title">Adresse</h4>
+                            <p class="info-detail">Centre-ville de Belfort</p>
+                            <p class="info-detail">90000 Belfort, France</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section class="social-section">
+                <h3 class="section-title">
+                    <span class="title-icon"></span>
+                    Suivez-nous
+                </h3>
+
+                <div class="social-grid">
+                    <a href="#" class="social-card facebook">
+                        <span class="social-icon"></span>
+                        <span class="social-name">Facebook</span>
+                    </a>
+
+                    <a href="#" class="social-card twitter">
+                        <span class="social-icon"></span>
+                        <span class="social-name">Twitter</span>
+                    </a>
+
+                    <a href="#" class="social-card linkedin">
+                        <span class="social-icon"></span>
+                        <span class="social-name">LinkedIn</span>
+                    </a>
+
+                    <a href="#" class="social-card instagram">
+                        <span class="social-icon"></span>
+                        <span class="social-name">Instagram</span>
+                    </a>
+                </div>
+            </section>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon"></span>
+                <span class="nav-label">Accueil</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon"></span>
+                <span class="nav-label">Recherche</span>
+            </a>
+            <a href="contact.html" class="nav-item active">
+                <span class="nav-icon"></span>
+                <span class="nav-label">Contact</span>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="nav-icon"></span>
+                <span class="nav-label">Profil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="contact.js"></script>
+</body>
+</html>

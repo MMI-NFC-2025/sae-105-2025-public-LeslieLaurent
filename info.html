@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Infos Pratiques - Les rives du territoire</title>
+    <link rel="stylesheet" href="infos.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <button class="back-btn">←</button>
+            <h1>Infos Pratiques</h1>
+            <button class="menu-btn">☰</button>
+        </header>
+
+        <div class="content">
+            <section class="tarifs-section">
+                <h2 class="section-title">
+                    <span class="section-icon"></span>
+                    Tarifs
+                </h2>
+                
+                <div class="carousel-container">
+                    <button class="carousel-btn prev" onclick="prevSlide()"></button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            <div class="tarif-card active">
+                                <div class="card-header">
+                                    <h3 class="card-title">Pass 1 jour</h3>
+                                    <p class="card-price">30€</p>
+                                </div>
+                                <ul class="card-features">
+                                    <li>✓ Accès à toutes les scènes</li>
+                                    <li>✓ 1 journée complète</li>
+                                    <li>✓ Vestiaire gratuit</li>
+                                </ul>
+                                <button class="buy-btn">Acheter</button>
+                            </div>
+
+                            <div class="tarif-card">
+                                <div class="card-header">
+                                    <h3 class="card-title">Pass 2 jours</h3>
+                                    <p class="card-price">65€</p>
+                                </div>
+                                <ul class="card-features">
+                                    <li>✓ Accès à toutes les scènes</li>
+                                    <li>✓ 2 jours complets</li>
+                                    <li>✓ Vestiaire gratuit</li>
+                                    <li>✓ Réduction restauration 10%</li>
+                                </ul>
+                                <button class="buy-btn">Acheter</button>
+                            </div>
+
+                            <div class="tarif-card featured">
+                                <div class="badge">Populaire</div>
+                                <div class="card-header">
+                                    <h3 class="card-title">VIP Pass</h3>
+                                    <p class="card-price">120€</p>
+                                </div>
+                                <ul class="card-features">
+                                    <li>✓ Accès VIP toutes scènes</li>
+                                    <li>✓ Festival complet (4 jours)</li>
+                                    <li>✓ Vestiaire privatif</li>
+                                    <li>✓ Backstage access</li>
+                                    <li>✓ Bar et restauration offerts</li>
+                                    <li>✓ Parking réservé</li>
+                                </ul>
+                                <button class="buy-btn">Acheter</button>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="carousel-btn next" onclick="nextSlide()"></button>
+                </div>
+
+                <div class="carousel-dots">
+                    <span class="dot active" onclick="goToSlide(0)"></span>
+                    <span class="dot" onclick="goToSlide(1)"></span>
+                    <span class="dot" onclick="goToSlide(2)"></span>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2 class="section-title">
+                    <span class="section-icon"></span>
+                    Hébergements
+                </h2>
+                <div class="info-card">
+                    <h3 class="info-subtitle">Hôtels partenaires</h3>
+                    <p class="info-text">Réductions jusqu'à 20% sur nos hôtels partenaires</p>
+                    <a href="#" class="info-link">Voir les offres →</a>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-subtitle">Camping</h3>
+                    <p class="info-text">Espace camping aménagé à 2km du site</p>
+                    <p class="info-price">25€/nuit</p>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2 class="section-title">
+                    <span class="section-icon"></span>
+                    Transports
+                </h2>
+                <div class="info-card">
+                    <div class="info-header-row">
+                        <div>
+                            <h3 class="info-subtitle">Navettes gratuites</h3>
+                            <p class="info-text">Gare → Festival</p>
+                        </div>
+                        <span class="check-badge"></span>
+                    </div>
+                    <p class="info-detail">Toutes les 30 minutes de 14h à 2h</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-subtitle">Parking</h3>
+                    <p class="info-text">2000 places disponibles</p>
+                    <p class="info-price">15€/jour</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-subtitle">Covoiturage</h3>
+                    <p class="info-text">Plateforme de covoiturage dédiée</p>
+                    <a href="#" class="info-link">S'inscrire →</a>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <h2 class="section-title">
+                    <span class="section-icon"></span>
+                    Restauration
+                </h2>
+                <div class="info-card">
+                    <h3 class="info-subtitle">Food trucks</h3>
+                    <p class="info-text">Plus de 20 food trucks variés</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-subtitle">Bars</h3>
+                    <p class="info-text">5 bars répartis sur le site</p>
+                </div>
+                <div class="info-card">
+                    <h3 class="info-subtitle">Zone pique-nique</h3>
+                    <p class="info-text">Espaces dédiés avec tables</p>
+                </div>
+            </section>
+
+            <section class="faq-section">
+                <h2 class="section-title">
+                    <span class="section-icon"></span>
+                    Questions fréquentes
+                </h2>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>À partir de quel âge peut-on assister au festival ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Le festival est accessible à tous les âges. Les enfants de moins de 12 ans doivent être accompagnés d'un adulte. L'entrée est gratuite pour les moins de 10 ans.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Peut-on apporter de la nourriture et des boissons ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Vous pouvez apporter votre propre nourriture et des bouteilles d'eau en plastique. Les bouteilles en verre et les boissons alcoolisées sont interdites pour des raisons de sécurité.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Y a-t-il des casiers disponibles ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, des casiers sécurisés sont disponibles en location pour 10€/jour. Ils se trouvent près de l'entrée principale et sont accessibles toute la journée.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Le festival est-il accessible aux personnes à mobilité réduite ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, le site est entièrement accessible. Des zones réservées sont prévues devant chaque scène. Contactez-nous pour organiser votre venue dans les meilleures conditions.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Que faire en cas de perte ou de vol ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Un point d'accueil sécurité est disponible à l'entrée principale. En cas de perte, rendez-vous aux objets trouvés. Pour un vol, contactez immédiatement notre équipe de sécurité.</p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFAQ(this)">
+                        <span>Puis-je sortir et rentrer à nouveau dans le festival ?</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p>Oui, les entrées et sorties sont libres. Assurez-vous de conserver votre bracelet bien visible et en bon état pour pouvoir rentrer à nouveau.</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <nav class="bottom-nav">
+            <a href="index.html" class="nav-item">
+                <span class="nav-icon"></span>
+                <span class="nav-label">Accueil</span>
+            </a>
+            <a href="artistes.html" class="nav-item">
+                <span class="nav-icon"></span>
+                <span class="nav-label">Artistes</span>
+            </a>
+            <a href="programme.html" class="nav-item">
+                <span class="nav-icon"></span>
+                <span class="nav-label">Programme</span>
+            </a>
+            <a href="infos.html" class="nav-item active">
+                <span class="nav-icon"></span>
+                <span class="nav-label">Infos</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="infos.js"></script>
+</body>
+</html>
