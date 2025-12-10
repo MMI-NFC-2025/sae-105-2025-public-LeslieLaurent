@@ -9,15 +9,34 @@
 }
 
 .info-icon {
-    width: 50px;
-    height: 50px;
-    min-width: 50px;
+    width: 60px;
+    height: 60px;
+    min-width: 40px;
     background-color: var(--blue);
-    border-radius: 50%;
+    border-radius: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-shrink: 0;
+    background-size: 24px 24px;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.info-icon.icon-lieu {
+    background-image: url("/assets/Media-image/Icon/place.svg");
+}
+
+.info-icon.icon-billetterie {
+    background-image: url("/assets/Media-image/Icon/billeterie.svg"); 
+}
+
+.info-icon.icon-hebergement {
+    background-image: url("/assets/Media-image/Icon/hebergement.svg");
+}
+
+.info-icon.icon-restauration {
+    background-image: url("/assets/Media-image/Icon/restauration.svg");
 }
 
 .info-content h3 {

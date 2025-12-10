@@ -4,20 +4,34 @@
     max-width: 600px;
     margin: var(--space-2xl) auto;
     line-height: 1.8;
-    text-align: center;
+    text-align: left;
     font-family: 'Inter', sans-serif;
 }
 
 .stats {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: var(--space-2xl);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--space-5xl);
     margin-top: var(--space-4xl);
-    padding: var(--space-3xl) 0;
+    padding: var(--space-3xl);
+    flex-wrap: wrap;
 }
 
 .stat-item {
     text-align: center;
+    flex: 0 1 auto;
+    border: 2px solid rgba(169, 206, 255, 0.3);
+    border-radius: 16px;
+    padding: var(--space-2xl) var(--space-3xl);
+    min-width: 140px;
+    background: linear-gradient(135deg, rgba(169, 206, 255, 0.05), rgba(58, 140, 233, 0.05));
+    transition: all 0.3s ease;
+}
+
+.stat-item:hover {
+    border-color: var(--blue);
+    background: linear-gradient(135deg, rgba(169, 206, 255, 0.1), rgba(58, 140, 233, 0.1));
 }
 
 .stat-number {

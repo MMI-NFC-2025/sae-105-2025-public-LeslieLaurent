@@ -1,6 +1,6 @@
 .event-card {
     background: linear-gradient(135deg, rgba(58, 140, 233, 0.1), rgba(169, 206, 255, 0.05));
-    border: 1px solid rgba(169, 206, 255, 0.2);
+    border: none;
     border-radius: 12px;
     padding: var(--space-2xl);
     margin-bottom: var(--space-2xl);
@@ -25,29 +25,48 @@
     color: var(--blue);
     font-weight: 600;
     text-transform: uppercase;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'merriweather', serif;
 }
 
 .event-icon {
-    width: 24px;
-    height: 24px;
-    background-color: var(--blue);
-    border-radius: 4px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    width: 28px;
+    height: 28px;
+    background-color: rgba(169, 206, 255, 0.15);
+    border: 1px solid rgba(169, 206, 255, 0.35);
+    border-radius: 6px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 18px 18px;
+    display: inline-block;
+    flex-shrink: 0;
+}
+
+.event-icon.icon-opening {
+    background-image: url("/assets/Media-image/Icon/Calendrier.svg");
+}
+
+.event-icon.icon-headliners {
+    background-image: url("/assets/Media-image/Icon/etoile.svg");
+}
+
+.event-icon.icon-multigenres {
+    background-image: url("/assets/Media-image/Icon/musiquelight.svg");
+}
+
+.event-icon.icon-finale {
+    background-image: url("/assets/Media-image/Icon/Vectorcoeur.svg");
 }
 
 .event-title {
     font-size: var(--h3);
-    color: var(--white);
+    color: var(--body-2);
     margin-bottom: var(--space-base);
     font-family: 'Roboto', sans-serif;
     font-weight: 600;
 }
 
 .event-description {
-    font-size: var(--body);
+    font-size: 11px;
     color: var(--body-2);
     margin: 0;
 }

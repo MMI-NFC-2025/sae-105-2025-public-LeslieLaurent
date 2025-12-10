@@ -23,30 +23,47 @@
 }
 
 .artist-card.purple {
-    background: linear-gradient(135deg, #c084fc, #9d4edd);
+    background: linear-gradient(135deg, rgba(255, 229, 42, 0.25), rgba(204, 86, 30, 0.35));
 }
 
 .artist-card.blue {
-    background: linear-gradient(135deg, #3a8ce9, #0a4588);
+    background: linear-gradient(135deg, rgba(207, 15, 15, 0.25), rgba(0, 0, 0, 0.35));
 }
 
 .artist-card.cyan {
-    background: linear-gradient(135deg, #06b6d4, #0891b2);
+    background: linear-gradient(135deg, rgba(115, 175, 111, 0.25), rgba(193, 229, 159, 0.35));
 }
 
 .artist-card.orange {
-    background: linear-gradient(135deg, #f97316, #ea580c);
+    background: linear-gradient(135deg, rgba(248, 117, 170, 0.25), rgba(171, 224, 240, 0.35));
 }
 
-.artist-icon {
-    width: 60px;
-    height: 60px;
-    background-color: rgba(255, 255, 255, 0.2);
-    border-radius: 8px;
+.artist-photo {
+    width: 70px;
+    height: 70px;
+    border-radius: 16px;
     margin-bottom: var(--space-lg);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+    border: 2px solid rgba(255, 255, 255, 0.35);
+}
+
+.photo-sofia {
+    background-image: url("/assets/Media-image/HomePage/SofiaIsella.jpg");
+}
+
+.photo-arctic {
+    background-image: url("/assets/Media-image/HomePage/ArticMonkeys.jpg");
+}
+
+.photo-billie {
+    background-image: url("/assets/Media-image/HomePage/BillieEillish.jpg");
+}
+
+.photo-dua {
+    background-image: url("/assets/Media-image/HomePage/DuaLipa.jpg");
 }
 
 .artist-name {

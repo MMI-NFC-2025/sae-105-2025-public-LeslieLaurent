@@ -6,16 +6,16 @@ section {
 section h2 {
     font-size: var(--h2);
     font-weight: 700;
-    color: var(--white);
+    color: var(--body-2);
     margin-bottom: var(--space-md);
-    font-family: 'Roboto', sans-serif;
+    font-family: 'merriweather', serif;
 }
 
 section .subtitle {
-    font-size: var(--body);
-    color: var(--body-2);
+    font-size: var(--txt-info);
+    color: var(--blue, #a9ceff);
     margin-bottom: var(--space-3xl);
-    font-family: 'Inter', sans-serif;
+    font-family: 'merriweather', serif;
 }
 
 .programme,
