@@ -1,0 +1,29 @@
+@import "vendors/normalize.css";
+
+/* Utils */
+@import "utils/variables.css";
+
+/* Base */
+@import "Base/main.css";
+@import "Base/media.css";
+
+/* Layout */
+@import "Layout/header.css";
+@import "Layout/footer.css";
+@import "Layout/section.css";
+@import "Layout/wrapper.css";
+
+/* Components */
+@import "components/menu.css";
+@import "components/hero.css";
+@import "components/bouton.css";
+@import "components/card-artist.css";
+@import "components/card-detail-artiste.css";
+@import "components/card-scene.css";
+@import "components/card-detail-scene.css";
+@import "components/carousel.css";
+@import "components/faq.css";
+@import "components/thumbnail.css";
+
+
+

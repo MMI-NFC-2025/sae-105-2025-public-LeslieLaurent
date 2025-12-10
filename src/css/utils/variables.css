@@ -1,0 +1,40 @@
+/* Color */
+:root {
+  /* Mode 1 */
+  /* color */
+  --blue: #a9ceff;
+  --blue-deep: #3a8ce9;
+  --body-2: #e5e7eb;
+  --body-text: #1a1a1c;
+  --dark-blue: #111827;
+  --dark-green-: #0c6600;
+  --dégradé-pink: #ff259147;
+  --green-dégradé: #71d37f73;
+  --navy-blue: #0a4588;
+  --white: #ffffff;
+}
+/* taille */
+:root {
+  --txt-info: 0.875rem;
+  --body: 1rem;
+  --h3: 1.125rem;
+  --h2: 1.5rem;
+  --chiffre: 1.875rem;
+  --h1: 1.875rem;
+  --text-6x1: 3.75rem;
+}
+
+
+/* Espaces */
+:root {
+  --space-sm: 0.125rem; /* 2px */
+  --space-base: 0.25rem; /* 4px */
+  --space-md: 0.5rem; /* 8px */
+  --space-lg: 0.75rem; /* 12px */
+  --space-xl: 1rem; /* 16px */
+  --space-2xl: 1.25rem; /* 20px */
+  --space-3xl: 1.5rem; /* 24px */
+  --space-4xl: 2rem; /* 32px */
+  --space-5xl: 2.5rem; /* 40px */
+  --space-6xl: 3.25rem; /* 52px */
+}

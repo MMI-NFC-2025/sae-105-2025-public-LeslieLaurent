@@ -1,0 +1,33 @@
+section {
+    padding: var(--space-4xl) var(--space-3xl);
+    text-align: center;
+}
+
+section h2 {
+    font-size: var(--h2);
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: var(--space-md);
+    font-family: 'Roboto', sans-serif;
+}
+
+section .subtitle {
+    font-size: var(--body);
+    color: var(--body-2);
+    margin-bottom: var(--space-3xl);
+    font-family: 'Inter', sans-serif;
+}
+
+.programme,
+.infos-pratiques,
+.partenaires {
+    background-color: var(--dark-blue);
+}
+
+.artistes {
+    background-color: var(--dark-blue);
+}
+
+.a-propos {
+    background-color: var(--dark-blue);
+}
