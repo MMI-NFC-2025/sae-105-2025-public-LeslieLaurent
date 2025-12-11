@@ -1,104 +1,177 @@
-<!DOCTYPE html>
+  <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scène Principale - Les rives du territoire</title>
      <link rel="stylesheet" href="src/css/style.css">
+     <script defer src="src/js/script.js"></script>
 </head>
 <body>
+
     <div class="container">
         <header>
-            <h1 class="logo">Les rives du territoires</h1>
-            <button class="menu-btn"></button>
+            <div class="logo">Les rives du territoire</div>
+            <div class="menu-icon">
+                <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"></button>
+            </div>
         </header>
 
+        <nav class="header_menu menu" id="mainNav" hidden>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                <li class="menu__item"><a href="Programme.html" class="menu__link">Programme</a></li>
+                <li class="menu__item"><a href="Artistes.html" class="menu__link">Artistes</a></li>
+                <li class="menu__item"><a href="scene.html" class="menu__link">Scènes</a></li>
+                <li class="menu__item"><a href="info.html" class="menu__link">Informations</a></li>
+                <li class="menu__item"><a href="Apropos.html" class="menu__link">À propos</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+            <div class="menu__social">
+                <ul class="menu__social-list">
+                    <li><a href="#" class="menu__social-link">Facebook</a></li>
+                    <li><a href="#" class="menu__social-link">Instagram</a></li>
+                    <li><a href="#" class="menu__social-link">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+
         <div class="content">
-            <div class="scene-hero">
-                <img src="" alt="Scène Principale" class="hero-image">
-            </div>
+            <div id="scene-detail-dynamic"></div>
+        <script>
+        const scenesData = {
+            "principale": {
+                name: "Scène Principale",
+                image: "assets/scene/sceneprincipale.jpg",
+                description: "Grande scène extérieure",
+                artists: [
+                    { name: "Arctic Monkeys", date: "2025-12-20", time: "21h00 - 22h30" },
+                    { name: "Dua Lipa", date: "2025-12-20", time: "19h00 - 20h30" },
+                    { name: "Billie Eilish", date: "2025-12-21", time: "21h00 - 22h30" }
+                ]
+            },
+            "acoustique": {
+                name: "Scène Acoustique",
+                image: "assets/scene/sceneaccoustique.jpg",
+                description: "Ambiance intimiste",
+                artists: [
+                    { name: "Mia Lyss", date: "2025-12-20", time: "18h00 - 19h00" },
+                    { name: "Sofia Isella", date: "2025-12-21", time: "18h00 - 19h00" }
+                ]
+            },
+            "urbaine": {
+                name: "Scène Urbaine",
+                image: "assets/scene/sceneprincipale.jpg",
+                description: "Rap, hip-hop, RnB",
+                artists: [
+                    { name: "Ricci", date: "2025-12-21", time: "20h00 - 21h00" }
+                ]
+            },
+            "rock": {
+                name: "Scène Rock",
+                image: "assets/scene/scenerock.jpg",
+                description: "Rock et indie",
+                artists: [
+                    { name: "Lennon Stella", date: "2025-12-22", time: "20h00 - 21h00" }
+                ]
+            },
+            "electro": {
+                name: "Scène Électro",
+                image: "assets/scene/sceneaccoustique.jpg",
+                description: "Électro, house, techno",
+                artists: [
+                    { name: "Miecaline", date: "2025-12-23", time: "22h00 - 23h00" }
+                ]
+            },
+            "jazz": {
+                name: "Scène Jazz",
+                image: "assets/scene/sceneprincipale.jpg",
+                description: "Jazz, soul, funk",
+                artists: [
+                    { name: "Billie Eilish", date: "2025-12-23", time: "19h00 - 20h00" }
+                ]
+            },
+            "tropicale": {
+                name: "Scène Tropicale",
+                image: "assets/scene/sceneaccoustique.jpg",
+                description: "Ambiance festive",
+                artists: [
+                    { name: "Dua Lipa", date: "2025-12-23", time: "18h00 - 19h00" }
+                ]
+            },
+            "metal": {
+                name: "Scène Metal",
+                image: "assets/scene/scenerock.jpg",
+                description: "Metal, hard rock",
+                artists: [
+                    { name: "Arctic Monkeys", date: "2025-12-23", time: "23h00 - 00h00" }
+                ]
+            }
+        };
 
-            <div class="scene-header">
-                <h2 class="scene-title">Scène Principale</h2>
-                <p class="scene-description">La scène principale du festival avec les plus grands artistes</p>
-            </div>
+        function getSceneFromUrl() {
+            const params = new URLSearchParams(window.location.search);
+            return params.get('scene');
+        }
 
-            <section class="schedule-section">
-                <div class="date-group">
-                    <h3 class="date-title">
-                        <span class="date-icon"></span>
-                        Vendredi 15 Juin
-                    </h3>
-                    
-                    <div class="artist-item">
-                        <div class="artist-info-inline">
-                            <h4 class="artist-name">Arctic Monkeys</h4>
-                            <p class="artist-time">21h00 - 22h30</p>
-                        </div>
-                        <span class="star-icon active"></span>
-                    </div>
-
-                    <div class="artist-item">
-                        <div class="artist-info-inline">
-                            <h4 class="artist-name">Dua Lipa</h4>
-                            <p class="artist-time">19h00 - 20h30</p>
-                        </div>
+        function renderSceneDetail(sceneKey) {
+            const scene = scenesData[sceneKey];
+            if (!scene) {
+                document.getElementById('scene-detail-dynamic').innerHTML = '<p>Scène non trouvée.</p>';
+                return;
+            }
+            // Tri artistes par date
+            const artistsSorted = scene.artists.slice().sort((a, b) => a.date.localeCompare(b.date));
+            let html = `
+                <div class="scene-hero" style="position:relative; width:100%; max-width:700px; height:340px; margin:0 auto 32px auto; border-radius:22px; overflow:hidden; display:flex; align-items:center; justify-content:center;">
+                    <img src="${scene.image}" alt="${scene.name}" style="position:absolute; inset:0; width:100%; height:100%; object-fit:cover; opacity:0.45; filter:brightness(0.7); z-index:1;">
+                    <div style="position:relative; z-index:2; color:#fff; text-align:center; width:100%; padding:0 16px;">
+                        <h2 class="scene-title" style="font-size:2.3rem; font-weight:bold; margin-bottom:0.5em; text-shadow:0 2px 12px #000a;">${scene.name}</h2>
+                        <p class="scene-description" style="font-size:1.2rem; text-shadow:0 2px 8px #000a;">${scene.description}</p>
                     </div>
                 </div>
+                <section class="schedule-section">
+                    <h3>Artistes programmés</h3>
+                    <ul class="artist-list">
+                        ${artistsSorted.map(a => `<li><strong>${a.name}</strong> <span style='color:#888'>${a.date} ${a.time ? ' - ' + a.time : ''}</span></li>`).join('')}
+                    </ul>
+                </section>
+            `;
+            document.getElementById('scene-detail-dynamic').innerHTML = html;
+        }
 
-                <div class="date-group">
-                    <h3 class="date-title">
-                        <span class="date-icon"></span>
-                        Samedi 16 Juin
-                    </h3>
-                    
-                    <div class="artist-item">
-                        <div class="artist-info-inline">
-                            <h4 class="artist-name">The Weeknd</h4>
-                            <p class="artist-time">21h00 - 22h30</p>
-                        </div>
-                        <span class="star-icon active"></span>
-                    </div>
-
-                    <div class="artist-item">
-                        <div class="artist-info-inline">
-                            <h4 class="artist-name">Billie Eilish</h4>
-                            <p class="artist-time">19h00 - 20h30</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
+        document.addEventListener('DOMContentLoaded', function() {
+            const sceneKey = getSceneFromUrl();
+            renderSceneDetail(sceneKey);
+        });
+        </script>
 
             <section class="infos-section">
                 <h2 class="section-title">Infos Pratiques</h2>
 
                 <div class="info-card blue">
                     <div class="info-header">
-                        <span class="info-icon"></span>
                         <h3 class="info-title">Tarifs</h3>
-                    </div>
-                    <div class="pricing-list">
-                        <div class="pricing-item">
-                            <span class="pricing-label">Pass 1 jour</span>
-                            <span class="pricing-value">89€</span>
-                        </div>
-                        <div class="pricing-item">
-                            <span class="pricing-label">Pass 2 jours</span>
-                            <span class="pricing-value">159€</span>
-                        </div>
-                        <div class="pricing-item">
-                            <span class="pricing-label">VIP Pass</span>
-                            <span class="pricing-value">299€</span>
+                        <div class="pricing-list">
+                            <div class="pricing-item">
+                                <span class="pricing-label">Pass 1 jour</span>
+                                <span class="pricing-value">89€</span>
+                            </div>
+                            <div class="pricing-item">
+                                <span class="pricing-label">Pass 2 jours</span>
+                                <span class="pricing-value">159€</span>
+                            </div>
+                            <div class="pricing-item">
+                                <span class="pricing-label">VIP Pass</span>
+                                <span class="pricing-value">299€</span>
+                            </div>
                         </div>
                     </div>
                 </div>
 
                 <div class="info-card white">
                     <div class="info-header">
-                        <span class="info-icon"></span>
                         <h3 class="info-title">Hébergements</h3>
-                    </div>
-                    <div class="info-content">
                         <h4 class="info-subtitle">Hôtels partenaires</h4>
                         <p class="info-text">Réductions jusqu'à 20%</p>
                     </div>
@@ -106,44 +179,54 @@
 
                 <div class="info-card white">
                     <div class="info-header">
-                        <span class="info-icon"></span>
                         <h3 class="info-title">Transports</h3>
-                    </div>
-                    <div class="info-item-detail">
-                        <div class="info-detail-text">
-                            <h4 class="info-subtitle">Navettes gratuites</h4>
-                            <p class="info-text">Gare → Festival</p>
-                        </div>
-                        <span class="check-icon">✓</span>
-                    </div>
-                    <div class="info-item-detail">
-                        <div class="info-detail-text">
-                            <h4 class="info-subtitle">Parking</h4>
-                            <p class="info-text">15€/jour</p>
-                        </div>
+                        <h4 class="info-subtitle">Navettes gratuites</h4>
+                        <p class="info-text">Gare → Festival</p>
+                        <h4 class="info-subtitle">Parking</h4>
+                        <p class="info-text">15€/jour</p>
                     </div>
                 </div>
             </section>
         </div>
 
-        <nav class="bottom-nav">
-            <a href="index.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Accueil</span>
-            </a>
-            <a href="scenes.html" class="nav-item active">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Scènes</span>
-            </a>
-            <a href="#" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Infos</span>
-            </a>
-            <a href="#" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Contact</span>
-            </a>
-        </nav>
-    </div>
-</body>
+ <footer>
+            <div class="footer-content">
+                <div class="footer-section footer-menu-section">
+                    <h4 class="footer-subtitle">Menu</h4>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="Programme.html">Programme</a></li>
+                        <li><a href="Artistes.html">Artistes</a></li>
+                        <li><a href="scene.html">Scènes</a></li>
+                        <li><a href="info.html">Informations</a></li>
+                        <li><a href="Apropos.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section footer-contact-section">
+                    <h4 class="footer-subtitle">Coordonnées</h4>
+                    <div class="footer-contact">
+                        <p>Centre-ville de Belfort</p>
+                        <p>90000 Belfort, France</p>
+                        <p>contact@rivesduterritoire.fr</p>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4 class="footer-subtitle">Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-facebook" aria-label="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-instagram" aria-label="Instagram"></a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-twitter" aria-label="Twitter"></a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-youtube" aria-label="YouTube"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Les rives du territoire. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
 </html>

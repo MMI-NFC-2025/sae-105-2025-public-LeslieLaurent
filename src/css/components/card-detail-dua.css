@@ -1,0 +1,104 @@
+
+
+.artist-detail-page .container {
+	padding: 0 0 24px;
+}
+
+.artist-detail-page .hero-section {
+	position: relative;
+	min-height: 450px;
+	border-radius: 28px;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	display: flex;
+	align-items: flex-start;
+	padding: 180px 18px 60px;
+	margin: 12px 12px 8px;
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.35);
+}
+
+.artist-detail-page .hero-section::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	z-index: 1;
+}
+
+.artist-detail-page .hero-overlay {
+	position: absolute;
+	inset: 0;
+	background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08), transparent 35%),
+				radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.05), transparent 30%);
+	z-index: 1;
+}
+
+.artist-detail-page .hero-header {
+	position: absolute;
+	top: 14px;
+	left: 12px;
+	right: 12px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	z-index: 2;
+}
+
+.artist-detail-page .hero-header button {
+	width: 44px;
+	height: 44px;
+	border-radius: 50%;
+	border: 1px solid rgba(255, 255, 255, 0.25);
+	background: rgba(0, 0, 0, 0.5);
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	backdrop-filter: blur(6px);
+	transition: transform 0.2s ease;
+}
+
+.artist-detail-page .hero-header button:hover {
+	transform: translateY(-2px);
+	background: rgba(255, 255, 255, 0.16);
+	border-color: rgba(255, 255, 255, 0.4);
+}
+
+.artist-detail-page .hero-actions {
+	display: none;
+	gap: 10px;
+}
+
+.artist-detail-page .hero-card {
+	position: relative;
+	z-index: 2;
+	width: 100%;
+	background: linear-gradient(180deg, rgba(201, 122, 57, 0.55) 0%, rgba(250, 184, 109, 0.62) 100%);
+	border: 1px solid rgba(255, 255, 255, 0.15);
+	backdrop-filter: blur(18px);
+	border-radius: 22px;
+	padding: 18px 18px 20px;
+	color: #fff;
+	box-shadow: 0 18px 40px rgba(0, 0, 0, 0.4);
+}
+
+.artist-detail-page .hero-card::after {
+	content: "";
+	position: absolute;
+	inset: -12px;
+	border-radius: 26px;
+	background: linear-gradient(180deg, rgba(255, 255, 255, 0.12) 0%, rgba(111, 171, 230, 0.28) 100%);
+	filter: blur(22px);
+	z-index: -1;
+}
+
+.artist-detail-page .hero-card .badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	padding: 6px 14px;
+	background: rgba(255, 255, 255, 0.25);
+	border: 1px solid rgba(255, 255, 255, 0.35);
+	border-radius: 999px;
+	font-size: 11px;
+}
+/* ...le reste du CSS à compléter si besoin... */

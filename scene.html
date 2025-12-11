@@ -1,110 +1,144 @@
-<!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Programme - Les rives du territoire</title>
      <link rel="stylesheet" href="src/css/style.css">
+     <script defer src="src/js/script.js"></script>
 </head>
 <body>
+
     <div class="container">
         <header>
-            <button class="back-btn">←</button>
-            <h1>Scènes</h1>
-            <button class="filter-btn">☰</button>
+            <div class="logo">Les rives du territoire</div>
+            <div class="menu-icon">
+                <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav"></button>
+            </div>
         </header>
+
+        <nav class="header_menu menu" id="mainNav" hidden>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                <li class="menu__item"><a href="Programme.html" class="menu__link">Programme</a></li>
+                <li class="menu__item"><a href="Artistes.html" class="menu__link">Artistes</a></li>
+                <li class="menu__item"><a href="scene.html" class="menu__link">Scènes</a></li>
+                <li class="menu__item"><a href="info.html" class="menu__link">Informations</a></li>
+                <li class="menu__item"><a href="Apropos.html" class="menu__link">À propos</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+            <div class="menu__social">
+                <ul class="menu__social-list">
+                    <li><a href="#" class="menu__social-link">Facebook</a></li>
+                    <li><a href="#" class="menu__social-link">Instagram</a></li>
+                    <li><a href="#" class="menu__social-link">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <div class="search-section">
             <div class="search-bar">
-                <span class="search-icon"></span>
-                <input type="text" placeholder="Rechercher un artiste...">
-            </div>
-
-            <div class="time-filters">
-                <button class="time-btn active">Tous</button>
-                <button class="time-btn">Aujourd'hui</button>
-                <button class="time-btn">Demain</button>
-                <button class="time-btn">Festival</button>
+                <img src="/assets/Media-image/Icon/search.svg" alt="Rechercher" class="search-icon">
+                <input type="text" placeholder="Rechercher un artiste..." class="search-input">
             </div>
         </div>
 
         <div class="scenes-list">
-            <div class="scene-card">
-                <img src="" alt="Scène principale" class="scene-image">
-                <button class="favorite-btn active"></button>
+            <a class="scene-card" data-scene="principale" href="scene-details.html?scene=principale">
+                <div class="scene-image" style="background-image: url('assets/scene/sceneprincipale.jpg'); height:180px; border-radius:10px; background-size:cover; background-position:center;"></div>
                 <div class="scene-info">
-                    <h3 class="scene-name">Scène principale</h3>
+                    <h3 class="event-title">Scène Principale</h3>
+                    <p class="event-description">Grande scène extérieure</p>
                 </div>
-            </div>
-
-            <div class="scene-card">
-                <img src="" alt="Scène Acoustique" class="scene-image">
+            </a>
+            <a class="scene-card" data-scene="acoustique" href="scene-details.html?scene=acoustique">
+                <div class="scene-image" style="background-image: url('assets/scene/sceneaccoustique.jpg'); height:180px; border-radius:10px; background-size:cover; background-position:center;"></div>
                 <div class="scene-info">
-                    <h3 class="scene-name">Scène Acoustique</h3>
+                    <h3 class="event-title">Scène Acoustique</h3>
+                    <p class="event-description">Ambiance intimiste</p>
                 </div>
-            </div>
-
-            <div class="scene-card">
-                <img src="" alt="Scène Urbaine" class="scene-image">
+            </a>
+            <a class="scene-card" data-scene="urbaine" href="scene-details.html?scene=urbaine">
+                <div class="scene-image" style="background-image: url('assets/scene/sceneprincipale.jpg'); height:180px; border-radius:10px; background-size:cover; background-position:center;"></div>
                 <div class="scene-info">
-                    <h3 class="scene-name">Scène Urbaine</h3>
+                    <h3 class="event-title">Scène Urbaine</h3>
+                    <p class="event-description">Rap, hip-hop, RnB</p>
                 </div>
-            </div>
-
-            <div class="scene-card">
-                <img src="" alt="Scène Rock" class="scene-image">
+            </a>
+            <a class="scene-card" data-scene="rock" href="scene-details.html?scene=rock">
+                <div class="scene-image" style="background-image: url('assets/scene/scenerock.jpg'); height:180px; border-radius:10px; background-size:cover; background-position:center;"></div>
                 <div class="scene-info">
-                    <h3 class="scene-name">Scène Rock</h3>
+                    <h3 class="event-title">Scène Rock</h3>
+                    <p class="event-description">Rock et indie</p>
                 </div>
-            </div>
-
-            <div class="scene-card">
-                <img src="" alt="Scène Électro" class="scene-image">
+            </a>
+            <a class="scene-card" data-scene="electro" href="scene-details.html?scene=electro">
+                <div class="scene-image" style="background-image: url('assets/scene/sceneaccoustique.jpg'); height:180px; border-radius:10px; background-size:cover; background-position:center;"></div>
                 <div class="scene-info">
-                    <h3 class="scene-name">Scène Électro</h3>
+                    <h3 class="event-title">Scène Électro</h3>
+                    <p class="event-description">Électro, house, techno</p>
                 </div>
-            </div>
-
-            <div class="scene-card">
-                <img src="" alt="Scène Jazz" class="scene-image">
+            </a>
+            <a class="scene-card" data-scene="jazz" href="scene-details.html?scene=jazz">
+                <div class="scene-image" style="background-image: url('assets/scene/sceneprincipale.jpg'); height:180px; border-radius:10px; background-size:cover; background-position:center;"></div>
                 <div class="scene-info">
-                    <h3 class="scene-name">Scène Jazz</h3>
+                    <h3 class="event-title">Scène Jazz</h3>
+                    <p class="event-description">Jazz, soul, funk</p>
                 </div>
-            </div>
-
-            <div class="scene-card">
-                <img src="" alt="Scène Tropicale" class="scene-image">
+            </a>
+            <a class="scene-card" data-scene="tropicale" href="scene-details.html?scene=tropicale">
+                <div class="scene-image" style="background-image: url('assets/scene/sceneaccoustique.jpg'); height:180px; border-radius:10px; background-size:cover; background-position:center;"></div>
                 <div class="scene-info">
-                    <h3 class="scene-name">Scène Tropicale</h3>
+                    <h3 class="event-title">Scène Tropicale</h3>
+                    <p class="event-description">Ambiance festive</p>
                 </div>
-            </div>
-
-            <div class="scene-card">
-                <img src="" alt="Scène Metal" class="scene-image">
+            </a>
+            <a class="scene-card" data-scene="metal" href="scene-details.html?scene=metal">
+                <div class="scene-image" style="background-image: url('assets/scene/scenerock.jpg'); height:180px; border-radius:10px; background-size:cover; background-position:center;"></div>
                 <div class="scene-info">
-                    <h3 class="scene-name">Scène Metal</h3>
+                    <h3 class="event-title">Scène Metal</h3>
+                    <p class="event-description">Metal, hard rock</p>
                 </div>
-            </div>
+            </a>
         </div>
+ <footer>
+            <div class="footer-content">
+                <div class="footer-section footer-menu-section">
+                    <h4 class="footer-subtitle">Menu</h4>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="Programme.html">Programme</a></li>
+                        <li><a href="Artistes.html">Artistes</a></li>
+                        <li><a href="scene.html">Scènes</a></li>
+                        <li><a href="info.html">Informations</a></li>
+                        <li><a href="Apropos.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
 
-        <nav class="bottom-nav">
-            <a href="index.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Accueil</span>
-            </a>
-            <a href="artistes.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Artistes</span>
-            </a>
-            <a href="programme.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Programme</span>
-            </a>
-            <a href="#" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Profil</span>
-            </a>
-        </nav>
-    </div>
-</body>
+                <div class="footer-section footer-contact-section">
+                    <h4 class="footer-subtitle">Coordonnées</h4>
+                    <div class="footer-contact">
+                        <p>Centre-ville de Belfort</p>
+                        <p>90000 Belfort, France</p>
+                        <p>contact@rivesduterritoire.fr</p>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4 class="footer-subtitle">Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-facebook" aria-label="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-instagram" aria-label="Instagram"></a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-twitter" aria-label="Twitter"></a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-youtube" aria-label="YouTube"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Les rives du territoire. Tous droits réservés.</p>
+            </div>
+        </footer>
+    </body>
 </html>

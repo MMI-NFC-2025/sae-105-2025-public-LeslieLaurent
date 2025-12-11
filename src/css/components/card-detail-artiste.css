@@ -1,13 +1,7 @@
-/* Page détail artiste */
-.artist-detail-page {
-	background: linear-gradient(180deg, #5ba3d0 0%, #9fd4f4 40%, #d4e9f8 100%);
-}
-
 .artist-detail-page .container {
 	padding: 0 0 24px;
 }
 
-/* Mise en page de la page détail artiste */
 .artist-detail-page .hero-section {
 	position: relative;
 	min-height: 450px;
@@ -26,7 +20,6 @@
 	content: "";
 	position: absolute;
 	inset: 0;
-	background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.75) 100%);
 	z-index: 1;
 }
 
@@ -59,7 +52,7 @@
 	font-size: 18px;
 	cursor: pointer;
 	backdrop-filter: blur(6px);
-	transition: transform 0.2s ease, background 0.2s ease, border 0.2s ease;
+	transition: transform 0.2s ease;
 }
 
 .artist-detail-page .hero-header button:hover {
@@ -114,7 +107,7 @@
 	font-size: 32px;
 	font-weight: 800;
 	margin: 0 0 14px;
-	color: #fff;
+	color: var(--body-2);
 	letter-spacing: -0.5px;
 }
 
@@ -123,7 +116,7 @@
 	gap: 16px;
 	flex-wrap: wrap;
 	margin-bottom: 12px;
-	color: #fff;
+	color: var(--body-2);
 	font-weight: 500;
 }
 
@@ -141,7 +134,7 @@
 	display: flex;
 	align-items: center;
 	gap: 8px;
-	color: #fff;
+	color: var(--body-2);
 	margin-bottom: 12px;
 	font-size: 13px;
 	font-weight: 500;
@@ -165,7 +158,7 @@
 }
 
 .artist-detail-page .hero-card .artist-description {
-	color: #fff;
+	color: var(--body-2);
 	font-size: 13px;
 	line-height: 1.6;
 	margin-bottom: 18px;
@@ -278,106 +271,24 @@
 	text-decoration: none;
 }
 
-.artist-detail-page .gallery-grid {
-	display: grid;
-	grid-template-columns: repeat(2, 1fr);
-	gap: 10px;
-}
-
-.artist-detail-page .gallery-carousel {
-	display: flex;
-	align-items: center;
-	gap: 12px;
-	position: relative;
-}
-
-.artist-detail-page .carousel-wrapper {
-	flex: 1;
-	overflow: hidden;
-	border-radius: 14px;
-}
-
-.artist-detail-page .carousel-track {
-	display: flex;
-	transition: transform 0.4s ease;
-	gap: 10px;
-}
-
-.artist-detail-page .carousel-btn {
-	width: 40px;
-	height: 40px;
-	border-radius: 50%;
-	background: rgba(0, 0, 0, 0.2);
-	border: 1px solid rgba(255, 255, 255, 0.3);
-	color: #fff;
-	font-size: 18px;
-	cursor: pointer;
-	transition: all 0.2s ease;
-	flex-shrink: 0;
-}
-
-.artist-detail-page .carousel-btn:hover {
-	background: rgba(0, 0, 0, 0.4);
-	border-color: rgba(255, 255, 255, 0.5);
-}
 
 .artist-detail-page .gallery-image {
-	width: 200px;
-	height: 200px;
+	width: 45vw;
+	max-width: 400px;
+	aspect-ratio: 1/1;
 	object-fit: cover;
+	object-position: 50% 50%;
 	border-radius: 14px;
 	box-shadow: 0 8px 18px rgba(0, 0, 0, 0.15);
 }
 
-.artist-detail-page .social-section .social-links {
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	gap: 12px;
+@media (min-width: 600px) {
+       .artist-detail-page .gallery-image {
+	       width: 400px;
+	       max-width: 100%;
+       }
 }
 
-.artist-detail-page .social-btn {
-	display: inline-flex;
-	align-items: center;
-	justify-content: center;
-	height: 56px;
-	border-radius: 14px;
-	background: #fff;
-	box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12);
-}
-
-.artist-detail-page .similar-artists {
-	display: grid;
-	grid-template-columns: repeat(3, 1fr);
-	gap: 10px;
-}
-
-.artist-detail-page .similar-card {
-	background: #fff;
-	border-radius: 14px;
-	padding: 8px;
-	text-align: center;
-	box-shadow: 0 10px 18px rgba(0, 0, 0, 0.1);
-}
-
-.artist-detail-page .similar-image {
-	width: 100%;
-	aspect-ratio: 1 / 1;
-	object-fit: cover;
-	border-radius: 10px;
-	margin-bottom: 6px;
-}
-
-.artist-detail-page .similar-name {
-	font-size: 13px;
-	color: #0b1a3a;
-	margin: 0 0 2px;
-}
-
-.artist-detail-page .similar-genre {
-	font-size: 11px;
-	color: #3c76c5;
-	margin: 0;
-}
 
 @media (max-width: 768px) {
 	.artist-detail-page .hero-section {

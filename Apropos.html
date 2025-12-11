@@ -1,3 +1,4 @@
+     
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -5,24 +6,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Les rives du territoire</title>
      <link rel="stylesheet" href="src/css/style.css">
+     <script defer src="src/js/script.js"></script>
 </head>
 
 <body>
-    <header class="topbar">
-        <button class="icon-btn">
-            <svg width="22" height="22" viewBox="0 0 24 24" fill="none">
-                <path d="M15 18L9 12L15 6" stroke="#000" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-        </button>
 
-        <h1 class="top-title">Les rives du territoire</h1>
+        <header>
+            <div class="logo">Les rives du territoire</div>
+            <div class="menu-icon">
+                <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+                </button>
+            </div>
+        </header>
 
-        <button class="icon-btn">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none">
-                <path d="M4 6H20M4 12H20M4 18H20" stroke="#000" stroke-width="2" stroke-linecap="round"/>
-            </svg>
-        </button>
-    </header>
+        <nav class="header_menu menu" id="mainNav" hidden>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                <li class="menu__item"><a href="Programme.html" class="menu__link">Programme</a></li>
+                <li class="menu__item"><a href="Artistes.html" class="menu__link">Artistes</a></li>
+                <li class="menu__item"><a href="scene.html" class="menu__link">Scènes</a></li>
+                <li class="menu__item"><a href="info.html" class="menu__link">Informations</a></li>
+                <li class="menu__item"><a href="Apropos.html" class="menu__link">À propos</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+            <div class="menu__social">
+                <ul class="menu__social-list">
+                    <li><a href="#" class="menu__social-link">Facebook</a></li>
+                    <li><a href="#" class="menu__social-link">Instagram</a></li>
+                    <li><a href="#" class="menu__social-link">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
 
     <section class="hero">
         <div class="hero-icon">
@@ -177,6 +191,44 @@
             <p>Billets</p>
         </div>
     </nav>
+<footer>
+            <div class="footer-content">
+                <div class="footer-section footer-menu-section">
+                    <h4 class="footer-subtitle">Menu</h4>
+                    <ul class="footer-menu">
+                        <li><a href="index.html">Accueil</a></li>
+                        <li><a href="Programme.html">Programme</a></li>
+                        <li><a href="Artistes.html">Artistes</a></li>
+                        <li><a href="scene.html">Scènes</a></li>
+                        <li><a href="info.html">Informations</a></li>
+                        <li><a href="Apropos.html">À propos</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
 
+                <div class="footer-section footer-contact-section">
+                    <h4 class="footer-subtitle">Coordonnées</h4>
+                    <div class="footer-contact">
+                        <p>Centre-ville de Belfort</p>
+                        <p>90000 Belfort, France</p>
+                        <p>contact@rivesduterritoire.fr</p>
+                        <p>+33 1 23 45 67 89</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <h4 class="footer-subtitle">Suivez-nous</h4>
+                <div class="social-icons">
+                    <a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-facebook" aria-label="Facebook"></a>
+                    <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-instagram" aria-label="Instagram"></a>
+                    <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-twitter" aria-label="Twitter"></a>
+                    <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-youtube" aria-label="YouTube"></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p class="copyright">© 2025 Les rives du territoire. Tous droits réservés.</p>
+            </div>
+        </footer>
 </body>
 </html>

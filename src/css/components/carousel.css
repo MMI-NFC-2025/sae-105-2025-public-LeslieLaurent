@@ -1,1 +1,50 @@
+.artist-detail-page .gallery-grid {
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	gap: 10px;
+}
 
+.artist-detail-page .gallery-carousel {
+	display: flex;
+	align-items: center;
+	gap: 12px;
+	position: relative;
+}
+
+.artist-detail-page .carousel-wrapper {
+	width: 90vw;
+	max-width: 320px;
+	aspect-ratio: 1/1;
+	overflow: hidden;
+	border-radius: 14px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.artist-detail-page .carousel-track {
+	display: flex;
+	transition: transform 0.4s ease;
+	gap: 10px;
+	width: 100%;
+	height: 100%;
+	align-items: center;
+}
+
+.artist-detail-page .carousel-btn {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(0, 0, 0, 0.2);
+	border: 1px solid rgba(255, 255, 255, 0.3);
+	color: #fff;
+	font-size: 18px;
+	cursor: pointer;
+	transition: all 0.2s ease;
+	flex-shrink: 0;
+}
+
+.artist-detail-page .carousel-btn:hover {
+	background: rgba(0, 0, 0, 0.4);
+	border-color: rgba(255, 255, 255, 0.5);
+}
