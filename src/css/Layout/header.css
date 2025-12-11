@@ -23,16 +23,14 @@ header {
 }
 
 .header_menu-btn {
-    width: var(--chiffre, 1.875rem);
-    height: var(--chiffre, 1.875rem);
+    width: 30px;
+    height: 24px;
     background: transparent;
     border: none;
     cursor: pointer;
     padding: 0;
     position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    display: block;
     transition: transform 0.3s ease;
     z-index: 1001;
 }
@@ -51,11 +49,12 @@ header {
     transition: all 0.3s ease;
     position: absolute;
     left: 0;
+    display: block;
 }
 
 .header_menu-btn::before {
     top: 0;
-    box-shadow: 0 11px 0 var(--body-2, #e5e7eb);
+    box-shadow: 0 10px 0 var(--body-2, #e5e7eb);
 }
 
 .header_menu-btn::after {
@@ -63,14 +62,14 @@ header {
 }
 
 .header_menu-btn[aria-expanded="true"]::before {
-    top: 11px;
-    transform: rotate(45deg);
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
     box-shadow: none;
 }
 
 .header_menu-btn[aria-expanded="true"]::after {
-    bottom: 11px;
-    transform: rotate(-45deg);
+    bottom: 50%;
+    transform: translateY(50%) rotate(-45deg);
 }
 
 @media (max-width: 768px) {

@@ -3,127 +3,180 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Artistes - Les rives du territoire</title>
      <link rel="stylesheet" href="src/css/style.css">
+     <script src="src/js/script.js" defer></script>
 </head>
 <body>
-    <div class="container">
+    <div class="container artistes-page">
         <header>
-            <button class="back-btn">←</button>
-            <h1>Artistes</h1>
-            <button class="filter-btn">⚙</button>
+            <a href="index.html" class="logo back-link">←</a>
+            <h1 class="page-title">Artistes</h1>
+            <div class="menu-icon">
+                <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="menu">
+                </button>
+            </div>
         </header>
 
-        <div class="search-section">
-            <div class="search-bar">
-                <span class="search-icon"></span>
-                <input type="text" placeholder="Rechercher un artiste...">
+        <nav class="header_menu menu" id="menu" hidden>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                <li class="menu__item"><a href="Programme.html" class="menu__link">Programme</a></li>
+                <li class="menu__item"><a href="Artistes.html" class="menu__link">Artistes</a></li>
+                <li class="menu__item"><a href="scene.html" class="menu__link">Scènes</a></li>
+                <li class="menu__item"><a href="info.html" class="menu__link">Informations</a></li>
+                <li class="menu__item"><a href="Apropos.html" class="menu__link">À propos</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+            <div class="menu__social">
+                <ul class="menu__social-list">
+                    <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Facebook</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Instagram</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Twitter</a></li>
+                </ul>
             </div>
-
-            <div class="time-filters">
-                <button class="time-btn active">Tous</button>
-                <button class="time-btn">Aujourd'hui</button>
-                <button class="time-btn">Demain</button>
-                <button class="time-btn">Festival</button>
-            </div>
-        </div>
-
-        <div class="artists-list">
-            <div class="artist-card">
-                <img src="" alt="Luna Eclipse" class="artist-image">
-                <button class="favorite-btn active"></button>
-                <div class="artist-info">
-                    <h3 class="artist-name">Luna Eclipse</h3>
-                    <p class="artist-datetime"> 15 Juin, 21:00</p>
-                    <p class="artist-location"> Scène Principale</p>
-                </div>
-            </div>
-
-            <div class="artist-card">
-                <img src="" alt="The Midnight Riders" class="artist-image">
-                <div class="artist-info">
-                    <h3 class="artist-name">The Midnight Riders</h3>
-                    <p class="artist-datetime"> 15 Juin, 19:30</p>
-                    <p class="artist-location"> Scène Rock</p>
-                </div>
-            </div>
-
-            <div class="artist-card">
-                <img src="" alt="MC Voltage" class="artist-image">
-                <button class="favorite-btn active"></button>
-                <div class="artist-info">
-                    <h3 class="artist-name">MC Voltage</h3>
-                    <p class="artist-datetime"> 16 Juin, 18:00</p>
-                    <p class="artist-location"> Scène Urbaine</p>
-                </div>
-            </div>
-
-            <div class="artist-card">
-                <img src="" alt="Sophie Rivers" class="artist-image">
-                <div class="artist-info">
-                    <h3 class="artist-name">Sophie Rivers</h3>
-                    <p class="artist-datetime"> 16 Juin, 15:30</p>
-                    <p class="artist-location"> Scène Acoustique</p>
-                </div>
-            </div>
-
-            <div class="artist-card">
-                <img src="" alt="Neon Dreams" class="artist-image">
-                <button class="favorite-btn active"></button>
-                <div class="artist-info">
-                    <h3 class="artist-name">Neon Dreams</h3>
-                    <p class="artist-datetime"> 16 Juin, 23:00</p>
-                    <p class="artist-location"> Scène Électro</p>
-                </div>
-            </div>
-
-            <div class="artist-card">
-                <img src="" alt="Blue Note Collective" class="artist-image">
-                <div class="artist-info">
-                    <h3 class="artist-name">Blue Note Collective</h3>
-                    <p class="artist-datetime"> 17 Juin, 17:00</p>
-                    <p class="artist-location"> Scène Jazz</p>
-                </div>
-            </div>
-
-            <div class="artist-card">
-                <img src="" alt="Island Vibes" class="artist-image">
-                <button class="favorite-btn active"></button>
-                <div class="artist-info">
-                    <h3 class="artist-name">Island Vibes</h3>
-                    <p class="artist-datetime">17 Juin, 20:30</p>
-                    <p class="artist-location"> Scène Tropicale</p>
-                </div>
-            </div>
-
-            <div class="artist-card">
-                <img src="" alt="Iron Thunder" class="artist-image">
-                <div class="artist-info">
-                    <h3 class="artist-name">Iron Thunder</h3>
-                    <p class="artist-datetime"> 17 Juin, 22:00</p>
-                    <p class="artist-location"> Scène Metal</p>
-                </div>
-            </div>
-        </div>
-
-        <nav class="bottom-nav">
-            <a href="index.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Accueil</span>
-            </a>
-            <a href="artistes.html" class="nav-item active">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Artistes</span>
-            </a>
-            <a href="programme.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Programme</span>
-            </a>
-            <a href="#" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Profil</span>
-            </a>
         </nav>
+
+        <div class="artistes-search">
+            <div class="search-bar">
+                <img src="/assets/Media-image/Icon/search.svg" alt="Rechercher" class="search-icon">
+                <input type="text" placeholder="Rechercher un artiste..." class="search-input">
+            </div>
+
+            <div class="artistes-filters">
+                <button class="filter-btn active" data-filter="tous">Tous</button>
+                <button class="filter-btn" data-filter="dimanche">Dimanche</button>
+                <button class="filter-btn" data-filter="lundi">Lundi</button>
+                <button class="filter-btn" data-filter="mardi">Mardi</button>
+                <button class="filter-btn" data-filter="mercredi">Mercredi</button>
+            </div>
+        </div>
+
+        <div class="artistes-list">
+            <div class="artist-card" data-date="tous dimanche" data-artist="sofia-isella">
+                <div class="artist-image sofia-image">
+                    <button class="favorite-btn active" aria-label="Ajouter aux favoris"></button>
+                </div>
+                <div class="artist-details">
+                <div> 
+                    <h3 class="artist-name">Sofia Isella </h3>
+                 </div>
+                   <div> 
+                    <p class="artist-date">Dimanche 20 Déc 2026, 21:00</p>
+                    </div>
+                   <div>
+                     <p class="artist-scene">Scène Principale</p>
+                     </div>
+                </div>
+            </div>
+            <!-- Arctic Monkeys -->
+            <div class="artist-card" data-date="tous dimanche" data-artist="arctic-monkeys">
+                <div class="artist-image arctic-image">
+                    <button class="favorite-btn" aria-label="Ajouter aux favoris"></button>
+                </div>
+                <div class="artist-details">
+                    <h3 class="artist-name">Arctic Monkeys</h3>
+                    <p class="artist-date">Dimanche 20 Déc 2026, 22:30</p>
+                    <p class="artist-scene">Scène Principale</p>
+                </div>
+            </div>
+
+            <!-- Billie Eilish -->
+            <div class="artist-card" data-date="tous lundi" data-artist="billie-eilish">
+                <div class="artist-image billie-image">
+                    <button class="favorite-btn" aria-label="Ajouter aux favoris"></button>
+                </div>
+                <div class="artist-details">
+                    <h3 class="artist-name">Billie Eilish</h3>
+                    <p class="artist-date">Lundi 21 Déc 2026, 20:00</p>
+                    <p class="artist-scene">Scène Acoustique</p>
+                </div>
+            </div>
+
+            <!-- Dua Lipa -->
+            <div class="artist-card" data-date="tous lundi" data-artist="dua-lipa">
+                <div class="artist-image dua-image">
+                    <button class="favorite-btn" aria-label="Ajouter aux favoris"></button>
+                </div>
+                <div class="artist-details">
+                    <h3 class="artist-name">Dua Lipa</h3>
+                    <p class="artist-date">Lundi 21 Déc 2026, 19:00</p>
+                    <p class="artist-scene">Scène Principale</p>
+                </div>
+            </div>
+
+            <!-- Lennon Stella -->
+            <div class="artist-card" data-date="tous mardi" data-artist="lennon-stella">
+                <div class="artist-image lennon-image">
+                    <button class="favorite-btn active" aria-label="Ajouter aux favoris"></button>
+                </div>
+                <div class="artist-details">
+                    <h3 class="artist-name">Lennon Stella</h3>
+                    <p class="artist-date">Mardi 22 Déc 2026, 21:00</p>
+                    <p class="artist-scene">Scène Principale</p>
+                </div>
+            </div>
+
+            <!-- Ricci -->
+            <div class="artist-card" data-date="tous mardi" data-artist="ricci">
+                <div class="artist-image ricci-image">
+                    <button class="favorite-btn" aria-label="Ajouter aux favoris"></button>
+                </div>
+                <div class="artist-details">
+                    <h3 class="artist-name">Ricci</h3>
+                    <p class="artist-date">Mardi 22 Déc 2026, 19:30</p>
+                    <p class="artist-scene">Scène Rock</p>
+                </div>
+            </div>
+
+            <!-- MC Voltage -->
+            <div class="artist-card" data-date="tous mardi" data-artist="mc-voltage">
+                <div class="artist-image voltage-image">
+                    <button class="favorite-btn" aria-label="Ajouter aux favoris"></button>
+                </div>
+                <div class="artist-details">
+                    <h3 class="artist-name">MC Voltage</h3>
+                    <p class="artist-date">Mardi 22 Déc 2026, 18:00</p>
+                    <p class="artist-scene">Scène Urbaine</p>
+                </div>
+            </div>
+
+            <!-- Mia Lyss -->
+            <div class="artist-card" data-date="tous mercredi" data-artist="mia-lyss">
+                <div class="artist-image mia-image">
+                    <button class="favorite-btn active" aria-label="Ajouter aux favoris"></button>
+                </div>
+                <div class="artist-details">
+                    <h3 class="artist-name">Mia Lyss</h3>
+                    <p class="artist-date">Mercredi 23 Déc 2026, 15:30</p>
+                    <p class="artist-scene">Scène Acoustique</p>
+                </div>
+            </div>
+        </div>
     </div>
+
+    <nav class="header_menu menu" id="mainNav" hidden>
+        <ul class="menu__list">
+            <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+            <li class="menu__item"><a href="Programme.html" class="menu__link">Programme</a></li>
+            <li class="menu__item"><a href="Artistes.html" class="menu__link">Artistes</a></li>
+            <li class="menu__item"><a href="scene.html" class="menu__link">Scènes</a></li>
+            <li class="menu__item"><a href="info.html" class="menu__link">Informations</a></li>
+            <li class="menu__item"><a href="Apropos.html" class="menu__link">À propos</a></li>
+            <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+        </ul>
+        <div class="menu__social">
+            <ul class="menu__social-list">
+                <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Facebook</a></li>
+                <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Instagram</a></li>
+                <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Twitter</a></li>
+            </ul>
+        </div>
+    </nav>
+</body>
+</html>
 </body>
 </html>

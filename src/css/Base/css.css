@@ -240,23 +240,26 @@ h2 {
 
 .stats {
     display: flex;
-    justify-content: space-around;
-    margin-top: 30px;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 24px;
+    flex-wrap: wrap;
 }
 
 .stat-item {
     text-align: center;
+    flex: 0 1 auto;
 }
 
 .stat-number {
-    font-size: 32px;
+    font-size: 22px;
     font-weight: 700;
     color: #667eea;
-    margin-bottom: 5px;
+    margin-bottom: 3px;
 }
 
 .stat-label {
-    font-size: 12px;
+    font-size: 11px;
     opacity: 0.8;
 }
 

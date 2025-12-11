@@ -23,7 +23,7 @@
 .event-date {
     font-size: var(--txt-info);
     color: var(--blue);
-    font-weight: 600;
+    font-weight: 500;
     text-transform: uppercase;
     font-family: 'merriweather', serif;
 }

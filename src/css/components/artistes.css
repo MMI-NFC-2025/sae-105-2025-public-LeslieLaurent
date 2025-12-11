@@ -1,0 +1,281 @@
+
+.artistes-page {
+    min-height: 100vh;
+    background: var(--dark-blue);
+    padding-bottom: var(--space-4xl);
+}
+
+.back-link {
+    font-size: var(--h2);
+    color: var(--white);
+    text-decoration: none;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.back-link:hover {
+    color: var(--blue);
+}
+
+.page-title {
+    font-size: var(--h1);
+    color: var(--white);
+    font-family: 'Merriweather', serif;
+    margin: 0;
+}
+
+.artistes-search {
+    padding: var(--space-2xl);
+    background: var(--dark-blue);
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: var(--white);
+    border-radius: 50px;
+    padding: var(--space-lg) var(--space-2xl);
+    margin-bottom: var(--space-xl);
+    gap: var(--space-lg);
+}
+
+.search-icon {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    background: transparent;
+    font-size: var(--body);
+    font-family: 'Roboto', sans-serif;
+    color: var(--body-text);
+    outline: none;
+}
+
+.search-input::placeholder {
+    color: #999;
+}
+
+/* Filter Buttons */
+.artistes-filters {
+    display: flex;
+    gap: var(--space-lg);
+    overflow-x: auto;
+    padding-bottom: var(--space-lg);
+}
+
+.filter-btn {
+    padding: var(--space-lg) var(--space-2xl);
+    border: none;
+    border-radius: 50px;
+    background-color: var(--white);
+    color: var(--body-text);
+    font-size: var(--body);
+    font-family: 'Roboto', sans-serif;
+    font-weight: 500;
+    cursor: pointer;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active {
+    background-color: var(--blue);
+    color: var(--dark-blue);
+    font-weight: 600;
+}
+
+/* Artists List */
+.artistes-list {
+    padding: var(--space-xl);
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Artist Card */
+.artist-card {
+    background-color: #f8f9fa;
+    border-radius: 20px;
+    padding: 12px;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    position: relative;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    animation: slideIn 0.3s ease;
+}
+
+.artist-card:hover {
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Image wrapper pour positionner le coeur */
+.artist-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 16px;
+    background-size: cover;
+    background-position: center;
+    flex-shrink: 0;
+    position: relative;
+}
+
+.artist-image.sofia-image {
+    background-image: url('/assets/Media-image/HomePage/SofiaIsella.jpg');
+}
+
+.artist-image.arctic-image {
+    background-image: url('/assets/Media-image/HomePage/ArticMonkeys.jpg');
+}
+
+.artist-image.billie-image {
+    background-image: url('/assets/Media-image/HomePage/BillieEillish.jpg');
+}
+
+.artist-image.dua-image {
+    background-image: url('/assets/Media-image/HomePage/DuaLipa.jpg');
+}
+
+.artist-image.lennon-image {
+    background-image: url('/assets/Media-image/HomePage/LennonStella.jpg');
+}
+
+.artist-image.ricci-image {
+    background-image: url('/assets/Media-image/HomePage/Ricci.jpg');
+}
+
+.artist-image.voltage-image {
+    background-image: url('https://images.unsplash.com/photo-1514525253161-7a46d19cd819?w=200&h=200&fit=crop');
+}
+
+.artist-image.mia-image {
+    background-image: url('/assets/Media-image/HomePage/MiaLyss.jpg');
+}
+
+.artistes-page .favorite-btn {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    width: 36px;
+    height: 36px;
+    border: 3px solid white;
+    background: #4285f4;
+    cursor: pointer;
+    font-size: 18px;
+    transition: all 0.3s ease;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.25);
+    padding: 0;
+    outline: none;
+}
+
+.artistes-page .favorite-btn::before {
+    content: "🤍";
+}
+
+.artistes-page .favorite-btn.active::before {
+    content: "❤️";
+}
+
+.artistes-page .favorite-btn:hover {
+    transform: scale(1.15);
+    background: #3367d6;
+    box-shadow: 0 4px 10px rgba(66, 133, 244, 0.4);
+}
+
+.artistes-page .favorite-btn:active {
+    transform: scale(0.95);
+}
+
+.artist-details {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    justify-content: center;
+}
+
+.artist-name {
+    font-size: 20px;
+    color: #4285f4;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    margin: 0;
+    line-height: 1.2;
+}
+
+/* Date avec icône calendrier */
+.artist-date {
+    font-size: 15px;
+    color: #5f6368;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+.artist-scene {
+    font-size: 15px;
+    color: #5f6368;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .artistes-search {
+        padding: var(--space-lg);
+    }
+
+    .search-bar {
+        padding: var(--space-md) var(--space-lg);
+    }
+
+    .artistes-list {
+        padding: var(--space-lg);
+        gap: 10px;
+    }
+
+    .artist-card {
+        padding: 10px;
+        gap: 12px;
+    }
+
+    .artist-image {
+        width: 70px;
+        height: 70px;
+    }
+
+    .favorite-btn {
+        left: 48px;
+        width: 28px;
+        height: 28px;
+        font-size: 14px;
+        border-width: 2px;
+    }
+
+    .artist-name {
+        font-size: 18px;
+    }
+
+    .artist-date,
+    .artist-scene {
+        font-size: 14px;
+    }
+}

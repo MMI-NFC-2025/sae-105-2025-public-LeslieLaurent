@@ -3,55 +3,76 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <title>Artistes - Les rives du territoire</title>
      <link rel="stylesheet" href="src/css/style.css">
+     <script src="src/js/script.js" defer></script>
 </head>
-<body>
+<body class="artist-detail-page">
     <div class="container">
-        <div class="hero-section">
-            <img src="" alt="Luna Solaris" class="hero-image">
-            <div class="hero-overlay">
-                <div class="hero-header">
-                    <button class="back-btn">←</button>
-                    <div class="hero-actions">
-                        <button class="share-btn">⤴</button>
-                        <button class="favorite-btn">♡</button>
-                    </div>
-                </div>
-                <span class="badge">En vedette</span>
+        <header>
+            <div class="logo">Les rives du territoire</div>
+            <div class="menu-icon">
+                <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+                </button>
             </div>
-        </div>
+        </header>
 
-        <div class="content">
-            <div class="artist-header">
-                <h1 class="artist-name">Luna Solaris</h1>
-                
+        <nav class="header_menu menu" id="mainNav" hidden>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                <li class="menu__item"><a href="Programme.html" class="menu__link">Programme</a></li>
+                <li class="menu__item"><a href="Artistes.html" class="menu__link">Artistes</a></li>
+                <li class="menu__item"><a href="scene.html" class="menu__link">Scènes</a></li>
+                <li class="menu__item"><a href="info.html" class="menu__link">Informations</a></li>
+                <li class="menu__item"><a href="Apropos.html" class="menu__link">À propos</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+            <div class="menu__social">
+                <ul class="menu__social-list">
+                    <li><a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Facebook</a></li>
+                    <li><a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Instagram</a></li>
+                    <li><a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="menu__social-link">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <div class="hero-section" style="background-image: url('assets/Media-image/HomePage/SofiaIsella.jpg');">
+            <div class="hero-overlay"></div>
+            <div class="hero-header">
+                <button class="back-btn" aria-label="Retour">←</button>
+                <div class="hero-actions">
+                    <button class="share-btn" aria-label="Partager">⤴</button>
+                    <button class="favorite-btn" aria-label="Ajouter aux favoris">♡</button>
+                </div>
+            </div>
+            <div class="hero-card">
+                <span class="badge">En vedette</span>
+                <h1 class="artist-name">Sofia Isella</h1>
                 <div class="artist-info">
                     <div class="info-item">
                         <span class="info-icon"></span>
-                        <span class="info-text">15 Juillet 2024</span>
+                        <span class="info-text">Dimanche 20 Déc 2026</span>
                     </div>
                     <div class="info-item">
                         <span class="info-icon"></span>
-                        <span class="info-text">21:30</span>
+                        <span class="info-text">21:00</span>
                     </div>
                 </div>
-
                 <div class="location">
                     <span class="location-icon"></span>
                     <span class="location-text">Scène Principale</span>
                 </div>
-
                 <div class="genres">
                     <span class="genre-tag">Electro-Pop</span>
                     <span class="genre-tag">Indie</span>
                     <span class="genre-tag">Synthwave</span>
                 </div>
-
                 <p class="artist-description">
-                    Artiste électro-pop montante, Luna Solaris fusionne des mélodies synthétiques captivantes avec des paroles introspectives. Son univers sonore unique transporte le public dans une atmosphère rêveuse et énergique, mêlant influences rétro et production moderne.
+                    Voix magnétique et synthés vifs, Sofia mélange pulsations électro et mélodies dream-pop pour des sets immersifs.
                 </p>
-
                 <div class="action-buttons">
                     <button class="btn-primary">
                         <span class="btn-icon"></span>
@@ -60,6 +81,9 @@
                     <button class="btn-add">+</button>
                 </div>
             </div>
+        </div>
+
+        <div class="content">
 
             <div class="stats">
                 <div class="stat-card">
@@ -81,16 +105,22 @@
                     <h2 class="section-title">Galerie</h2>
                     <a href="#" class="see-all">Voir tout</a>
                 </div>
-                <div class="gallery-grid">
-                    <img src="" alt="Photo 1" class="gallery-image">
-                    <img src="" alt="Photo 2" class="gallery-image">
-                    <img src="" alt="Photo 3" class="gallery-image">
-                    <img src="" alt="Photo 4" class="gallery-image">
+                <div class="gallery-carousel">
+                    <button class="carousel-btn carousel-prev" aria-label="Image précédente">❮</button>
+                    <div class="carousel-wrapper">
+                        <div class="carousel-track">
+                            <img src="assets/Media-image/HomePage/SofiaIsella.jpg" alt="Sofia Isella - Photo 1" class="gallery-image">
+                            <img src="assets/Media-image/HomePage/SofiaIsella.jpg" alt="Sofia Isella - Photo 2" class="gallery-image">
+                            <img src="assets/Media-image/HomePage/SofiaIsella.jpg" alt="Sofia Isella - Photo 3" class="gallery-image">
+                            <img src="assets/Media-image/HomePage/SofiaIsella.jpg" alt="Sofia Isella - Photo 4" class="gallery-image">
+                        </div>
+                    </div>
+                    <button class="carousel-btn carousel-next" aria-label="Image suivante">❯</button>
                 </div>
             </section>
 
             <section class="social-section">
-                <h2 class="section-title">Suivez Luna</h2>
+                <h2 class="section-title">Suivez Sofia</h2>
                 <div class="social-links">
                     <a href="#" class="social-btn instagram">
                         <span class="social-icon"></span>
