@@ -12,18 +12,50 @@
 <body>
     <div class="container">
         <header>
-            <div class="header-left">
-                <div class="logo-icon"></div>
-                <h1>Contact</h1>
+            <div class="logo">Les rives du territoire</div>
+            <div class="menu-icon">
+                <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+                </button>
             </div>
-            <button class="menu-btn"></button>
         </header>
+
+        <nav class="header_menu menu" id="mainNav" hidden>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                <li class="menu__item"><a href="Programme.html" class="menu__link">Programme</a></li>
+                <li class="menu__item"><a href="Artistes.html" class="menu__link">Artistes</a></li>
+                <li class="menu__item"><a href="scene.html" class="menu__link">Scènes</a></li>
+                <li class="menu__item"><a href="info.html" class="menu__link">Informations</a></li>
+                <li class="menu__item"><a href="Apropos.html" class="menu__link">À propos</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+            <div class="menu__social">
+                <ul class="menu__social-list">
+                    <li><a href="#" class="menu__social-link">Facebook</a></li>
+                    <li><a href="#" class="menu__social-link">Instagram</a></li>
+                    <li><a href="#" class="menu__social-link">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <div class="content">
             <div class="hero-section">
-                <div class="hero-icon"></div>
-                <h2 class="hero-title">Contactez-nous</h2>
-                <p class="hero-text">Nous sommes là pour vous aider. N'hésitez pas à nous contacter pour toute question ou demande.</p>
+                                <div class="hero-icon"></div>
+                                <h2 class="hero-title">Contactez-nous</h2>
+                                <p class="hero-text">Nous sommes là pour vous aider. N'hésitez pas à nous contacter pour toute question ou demande.</p>
+                                <style>
+                                .hero-section {
+                                    margin: 0 auto 2.2rem auto;
+                                    padding: 1.5rem 1.2rem 1.2rem 1.2rem;
+                                    max-width: 480px;
+                                    border-radius: 18px;
+                                }
+                                @media (max-width: 600px) {
+                                    .hero-section {
+                                        padding: 1.1rem 0.5rem 1.1rem 0.5rem;
+                                    }
+                                }
+                                </style>
             </div>
 
             <section class="form-section">
@@ -87,7 +119,7 @@
 
             <section class="info-section">
                 <h3 class="section-title" style="text-align:center; margin-bottom:1.1rem;">Nos coordonnées</h3>
-                <div class="info-cards" style="display:flex; flex-direction:column; gap:0.7rem; align-items:stretch;">
+                <div class="info-cards" style="display:flex; flex-direction:column; gap:0.7rem; align-items:flex-start;">
                     <div class="info-card" style="display:flex; align-items:flex-start; gap:0.7rem;">
                         <div class="info-icon email-icon" style="min-width:28px;"></div>
                         <div class="info-content" style="text-align:left;">
@@ -95,7 +127,6 @@
                             <p class="info-detail" style="margin:0; font-size:1rem;">contact@rivesduterritoire.fr</p>
                             <p class="info-detail" style="margin:0; font-size:1rem;">support@rivesduterritoire.fr</p>
                         </div>
-                    </div>
                     </div>
                     <div class="info-card" style="display:flex; align-items:flex-start; gap:0.7rem;">
                         <div class="info-icon phone-icon" style="min-width:28px;"></div>
@@ -105,7 +136,6 @@
                             <p class="info-sub" style="margin:0; font-size:0.97rem; color:#4a5568;">Lun-Ven 9h-18h</p>
                         </div>
                     </div>
-                    </div>
                     <div class="info-card" style="display:flex; align-items:flex-start; gap:0.7rem;">
                         <div class="info-icon location-icon" style="min-width:28px;"></div>
                         <div class="info-content" style="text-align:left;">
@@ -113,15 +143,6 @@
                             <p class="info-detail" style="margin:0; font-size:1rem;">Centre-ville de Belfort</p>
                             <p class="info-detail" style="margin:0; font-size:1rem;">90000 Belfort, France</p>
                         </div>
-                    </div>
-                                            <style>
-                                            .info-card {
-                                                border: 1.5px solid #e3e7f0;
-                                                border-radius: 13px;
-                                                padding: 0.85rem 1.1rem;
-                                                background: #f8fafc;
-                                            }
-                                            </style>
                     </div>
                 </div>
             </section>
