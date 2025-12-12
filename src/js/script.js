@@ -1,3 +1,112 @@
+// Carrousel photo galerie (Apropos.html)
+document.addEventListener('DOMContentLoaded', function() {
+    const track = document.querySelector('.photo-carousel .carousel-track');
+    const photos = document.querySelectorAll('.photo-carousel .carousel-photo');
+    const prevBtn = document.querySelector('.photo-carousel .carousel-btn.prev');
+    const nextBtn = document.querySelector('.photo-carousel .carousel-btn.next');
+    const dots = document.querySelectorAll('.carousel-dots .dot');
+    let current = 0;
+    function updatePhotoCarousel() {
+        photos.forEach((photo, i) => {
+            photo.classList.toggle('active', i === current);
+        });
+        dots.forEach((dot, i) => {
+            dot.classList.toggle('active', i === current);
+        });
+    }
+    if (prevBtn && nextBtn && photos.length > 0) {
+        prevBtn.addEventListener('click', () => {
+            current = (current - 1 + photos.length) % photos.length;
+            updatePhotoCarousel();
+        });
+        nextBtn.addEventListener('click', () => {
+            current = (current + 1) % photos.length;
+            updatePhotoCarousel();
+        });
+        dots.forEach((dot, i) => {
+            dot.addEventListener('click', () => {
+                current = i;
+                updatePhotoCarousel();
+            });
+        });
+        updatePhotoCarousel();
+    }
+});
+// FAQ accordion déroulante
+document.querySelectorAll('.faq-question').forEach(btn => {
+    btn.addEventListener('click', function() {
+        const item = btn.closest('.faq-item');
+        const answer = item.querySelector('.faq-answer');
+        const icon = btn.querySelector('.faq-icon');
+        const isOpen = item.classList.contains('open');
+        document.querySelectorAll('.faq-item.open').forEach(openItem => {
+            if (openItem !== item) {
+                openItem.classList.remove('open');
+                openItem.querySelector('.faq-answer').style.maxHeight = null;
+                openItem.querySelector('.faq-icon').textContent = '+';
+            }
+        });
+        if (!isOpen) {
+            item.classList.add('open');
+            answer.style.maxHeight = answer.scrollHeight + 'px';
+            icon.textContent = '-';
+        } else {
+            item.classList.remove('open');
+            answer.style.maxHeight = null;
+            icon.textContent = '+';
+        }
+    });
+});
+// Carrousel tarifs dédié à info.html
+if (document.querySelector('.tarif-carousel-track')) {
+    const track = document.querySelector('.tarif-carousel-track');
+    const cards = document.querySelectorAll('.tarif-card');
+    const prevBtn = document.querySelector('.tarif-carousel-btn.prev');
+    const nextBtn = document.querySelector('.tarif-carousel-btn.next');
+    let current = 0;
+    function updateTarifCarousel() {
+        cards.forEach((card, i) => {
+            card.classList.toggle('active', i === current);
+            card.style.display = (i === current) ? 'block' : 'none';
+        });
+    }
+    if (prevBtn && nextBtn && cards.length > 0) {
+        prevBtn.addEventListener('click', () => {
+            current = (current - 1 + cards.length) % cards.length;
+            updateTarifCarousel();
+        });
+        nextBtn.addEventListener('click', () => {
+            current = (current + 1) % cards.length;
+            updateTarifCarousel();
+        });
+        updateTarifCarousel();
+    }
+}
+// Carrousel tarifs sur info.html
+if (document.querySelector('.tarifs-section .carousel-track')) {
+    const track = document.querySelector('.carousel-track');
+    const cards = document.querySelectorAll('.tarif-card');
+    const prevBtn = document.querySelector('.carousel-btn.prev');
+    const nextBtn = document.querySelector('.carousel-btn.next');
+    let current = 0;
+    function updateCarousel() {
+        cards.forEach((card, i) => {
+            card.classList.toggle('active', i === current);
+            card.style.display = (i === current) ? 'block' : 'none';
+        });
+    }
+    if (prevBtn && nextBtn && cards.length > 0) {
+        prevBtn.addEventListener('click', () => {
+            current = (current - 1 + cards.length) % cards.length;
+            updateCarousel();
+        });
+        nextBtn.addEventListener('click', () => {
+            current = (current + 1) % cards.length;
+            updateCarousel();
+        });
+        updateCarousel();
+    }
+}
 document.addEventListener('DOMContentLoaded', function() {
     
     const menuBtn = document.querySelector('.header_menu-btn');
@@ -431,33 +540,32 @@ if (document.querySelector('.artist-detail-page')) {
         });
     }
 
-    // Carrousel galerie
-    const carouselTrack = document.querySelector('.carousel-track');
-    const carouselPrev = document.querySelector('.carousel-prev');
-    const carouselNext = document.querySelector('.carousel-next');
-    const galleryImgs = document.querySelectorAll('.carousel-track .gallery-image');
-    
-    if (carouselTrack && carouselPrev && carouselNext && galleryImgs.length > 0) {
-        let currentIndex = 0;
-        
-        function updateCarousel() {
-            const imageWidth = galleryImgs[0].offsetWidth + 10; // width + gap
-            carouselTrack.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
-        }
-        
-        carouselPrev.addEventListener('click', () => {
-            currentIndex = (currentIndex - 1 + galleryImgs.length) % galleryImgs.length;
-            updateCarousel();
+    // Carrousel galerie (supporte plusieurs carrousels indépendants)
+        document.querySelectorAll('.gallery-carousel').forEach(carousel => {
+            const track = carousel.querySelector('.carousel-track');
+            const prevBtn = carousel.querySelector('.carousel-prev');
+            const nextBtn = carousel.querySelector('.carousel-next');
+            const images = carousel.querySelectorAll('.carousel-track .gallery-image');
+            if (track && prevBtn && nextBtn && images.length > 0) {
+                let currentIndex = 0;
+                // Initialisation : active sur la première image
+                images.forEach((img, i) => img.classList.toggle('active', i === 0));
+                function updateCarousel() {
+                    images.forEach((img, i) => img.classList.toggle('active', i === currentIndex));
+                    const imageWidth = images[0].offsetWidth + 10; // width + gap
+                    track.style.transform = `translateX(${-currentIndex * imageWidth}px)`;
+                }
+                prevBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex - 1 + images.length) % images.length;
+                    updateCarousel();
+                });
+                nextBtn.addEventListener('click', () => {
+                    currentIndex = (currentIndex + 1) % images.length;
+                    updateCarousel();
+                });
+                updateCarousel();
+            }
         });
-        
-        carouselNext.addEventListener('click', () => {
-            currentIndex = (currentIndex + 1) % galleryImgs.length;
-            updateCarousel();
-        });
-
-        // Initialize position
-        updateCarousel();
-    }
 }
 
 

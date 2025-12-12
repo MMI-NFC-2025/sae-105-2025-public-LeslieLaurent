@@ -1,6 +1,11 @@
 .hero {
     position: relative;
-    height: 400px;
+    min-height: 55vh;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -10,6 +15,7 @@
         url("/assets/Media-image/HomePage/festival-hp.jpg");
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     overflow: hidden;
     margin-bottom: var(--space-4xl);
 }
@@ -67,9 +73,11 @@
 
 @media (max-width: 768px) {
     .hero {
-        height: 300px;
+        min-height: 220px;
+        width: 100vw;
+        margin-left: -50vw;
+        left: 50%;
     }
-
     .hero h1 {
         font-size: 2rem;
     }

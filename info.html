@@ -1,21 +1,44 @@
-</div>
-       
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Programme - Les rives du territoire</title>
-     <link rel="stylesheet" href="src/css/style.css">
-     <script defer src="src/js/script.js"></script>
+    <title>Infos Pratiques - Les rives du territoire</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bangers&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="src/css/style.css">
+    <script defer src="src/js/script.js"></script>
 </head>
 <body>
     <div class="container">
         <header>
-            <button class="back-btn">←</button>
-            <h1>Infos Pratiques</h1>
-            <button class="menu-btn">☰</button>
+            <div class="logo">Les rives du territoire</div>
+            <div class="menu-icon">
+                <button class="header_menu-btn menu-btn" aria-label="menu" aria-expanded="false" aria-controls="mainNav">
+                </button>
+            </div>
         </header>
+
+        <nav class="header_menu menu" id="mainNav" hidden>
+            <ul class="menu__list">
+                <li class="menu__item"><a href="index.html" class="menu__link">Accueil</a></li>
+                <li class="menu__item"><a href="Programme.html" class="menu__link">Programme</a></li>
+                <li class="menu__item"><a href="Artistes.html" class="menu__link">Artistes</a></li>
+                <li class="menu__item"><a href="scene.html" class="menu__link">Scènes</a></li>
+                <li class="menu__item"><a href="info.html" class="menu__link">Informations</a></li>
+                <li class="menu__item"><a href="Apropos.html" class="menu__link">À propos</a></li>
+                <li class="menu__item"><a href="contact.html" class="menu__link">Contact</a></li>
+            </ul>
+            <div class="menu__social">
+                <ul class="menu__social-list">
+                    <li><a href="#" class="menu__social-link">Facebook</a></li>
+                    <li><a href="#" class="menu__social-link">Instagram</a></li>
+                    <li><a href="#" class="menu__social-link">Twitter</a></li>
+                </ul>
+            </div>
+        </nav>
 
         <div class="content">
             <section class="tarifs-section">
@@ -25,10 +48,15 @@
                 </h2>
                 
                 <div class="carousel-container">
-                    <button class="carousel-btn prev" onclick="prevSlide()"></button>
-                    <div class="carousel-wrapper">
-                        <div class="carousel-track">
-                            <div class="tarif-card active">
+                    <div class="tarif-carousel-container">
+                        <button class="tarif-carousel-btn prev" aria-label="Précédent">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M15 18L9 12L15 6" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
+                        <div class="tarif-carousel-wrapper">
+                            <div class="tarif-carousel-track">
+                                <div class="tarif-card active">
                                 <div class="card-header">
                                     <h3 class="card-title">Pass 1 jour</h3>
                                     <p class="card-price">30€</p>
@@ -70,10 +98,19 @@
                                     <li>✓ Parking réservé</li>
                                 </ul>
                                 <button class="buy-btn">Acheter</button>
+                                </div>
                             </div>
                         </div>
+                        <button class="tarif-carousel-btn next" aria-label="Suivant">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M9 6L15 12L9 18" stroke="#111" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
+                        </button>
                     </div>
-                    <button class="carousel-btn next" onclick="nextSlide()"></button>
+                                </div>
+                                <script>
+                                // (JS déplacé dans src/js/script.js)
+                                </script>
                 </div>
 
                 <div class="carousel-dots">
@@ -84,47 +121,61 @@
             </section>
 
             <section class="info-section">
-                <h2 class="section-title">
-                    <span class="section-icon"></span>
-                    Hébergements
-                </h2>
-                <div class="info-card">
-                    <h3 class="info-subtitle">Hôtels partenaires</h3>
-                    <p class="info-text">Réductions jusqu'à 20% sur nos hôtels partenaires</p>
-                    <a href="#" class="info-link">Voir les offres →</a>
-                </div>
-                <div class="info-card">
-                    <h3 class="info-subtitle">Camping</h3>
-                    <p class="info-text">Espace camping aménagé à 2km du site</p>
-                    <p class="info-price">25€/nuit</p>
-                </div>
+                                <h2 class="section-title">
+                                        <span class="section-icon"></span>
+                                        Hébergements
+                                </h2>
+                                <div class="hebergement-grid">
+                                    <div class="info-card hebergement-card">
+                                        <span class="info-icon icon-hebergement"></span>
+                                        <div class="hebergement-content">
+                                            <h3 class="info-subtitle">Hôtels partenaires</h3>
+                                            <p class="info-text">Jusqu'à <strong>20% de réduction</strong> sur une sélection d'hôtels proches du festival.</p>
+                                            <a href="#" class="info-link">Voir les offres →</a>
+                                        </div>
+                                    </div>
+                                    <div class="info-card hebergement-card">
+                                        <span class="info-icon icon-hebergement"></span>
+                                        <div class="hebergement-content">
+                                            <h3 class="info-subtitle">Camping</h3>
+                                            <p class="info-text">Espace camping aménagé à 2km du site, navette gratuite.</p>
+                                            <p class="info-price">25€/nuit</p>
+                                            <a href="#" class="info-link">Réserver une place</a>
+                                        </div>
+                                    </div>
+                                </div>
             </section>
 
             <section class="info-section">
-                <h2 class="section-title">
-                    <span class="section-icon"></span>
-                    Transports
-                </h2>
-                <div class="info-card">
-                    <div class="info-header-row">
-                        <div>
-                            <h3 class="info-subtitle">Navettes gratuites</h3>
-                            <p class="info-text">Gare → Festival</p>
-                        </div>
-                        <span class="check-badge"></span>
-                    </div>
-                    <p class="info-detail">Toutes les 30 minutes de 14h à 2h</p>
-                </div>
-                <div class="info-card">
-                    <h3 class="info-subtitle">Parking</h3>
-                    <p class="info-text">2000 places disponibles</p>
-                    <p class="info-price">15€/jour</p>
-                </div>
-                <div class="info-card">
-                    <h3 class="info-subtitle">Covoiturage</h3>
-                    <p class="info-text">Plateforme de covoiturage dédiée</p>
-                    <a href="#" class="info-link">S'inscrire →</a>
-                </div>
+                                <h2 class="section-title">
+                                        <span class="section-icon"></span>
+                                        Transports
+                                </h2>
+                                <div class="transport-grid">
+                                    <div class="info-card transport-card">
+                                        <span class="info-icon icon-bus"></span>
+                                        <div class="transport-content">
+                                            <h3 class="info-subtitle">Navettes gratuites</h3>
+                                            <p class="info-text">Gare → Festival<br><span class="info-detail">Toutes les 30 min de 14h à 2h</span></p>
+                                        </div>
+                                    </div>
+                                    <div class="info-card transport-card">
+                                        <span class="info-icon icon-parking"></span>
+                                        <div class="transport-content">
+                                            <h3 class="info-subtitle">Parking</h3>
+                                            <p class="info-text">2000 places disponibles</p>
+                                            <p class="info-price">15€/jour</p>
+                                        </div>
+                                    </div>
+                                    <div class="info-card transport-card">
+                                        <span class="info-icon icon-covoit"></span>
+                                        <div class="transport-content">
+                                            <h3 class="info-subtitle">Covoiturage</h3>
+                                            <p class="info-text">Plateforme de covoiturage dédiée</p>
+                                            <a href="#" class="info-link">S'inscrire →</a>
+                                        </div>
+                                    </div>
+                                </div>
             </section>
 
             <section class="info-section">
@@ -132,17 +183,28 @@
                     <span class="section-icon"></span>
                     Restauration
                 </h2>
-                <div class="info-card">
-                    <h3 class="info-subtitle">Food trucks</h3>
-                    <p class="info-text">Plus de 20 food trucks variés</p>
-                </div>
-                <div class="info-card">
-                    <h3 class="info-subtitle">Bars</h3>
-                    <p class="info-text">5 bars répartis sur le site</p>
-                </div>
-                <div class="info-card">
-                    <h3 class="info-subtitle">Zone pique-nique</h3>
-                    <p class="info-text">Espaces dédiés avec tables</p>
+                <div class="restauration-grid">
+                    <div class="restauration-card">
+                        <span class="info-icon icon-foodtruck"></span>
+                        <div class="restauration-content">
+                            <h3 class="info-subtitle">Food trucks</h3>
+                            <p class="info-text">Plus de 20 food trucks variés</p>
+                        </div>
+                    </div>
+                    <div class="restauration-card">
+                        <span class="info-icon icon-bar"></span>
+                        <div class="restauration-content">
+                            <h3 class="info-subtitle">Bars</h3>
+                            <p class="info-text">5 bars répartis sur le site</p>
+                        </div>
+                    </div>
+                    <div class="restauration-card">
+                        <span class="info-icon icon-piquenique"></span>
+                        <div class="restauration-content">
+                            <h3 class="info-subtitle">Zone pique-nique</h3>
+                            <p class="info-text">Espaces dédiés avec tables</p>
+                        </div>
+                    </div>
                 </div>
             </section>
 
@@ -214,26 +276,6 @@
             </section>
         </div>
 
-        <nav class="bottom-nav">
-            <a href="index.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Accueil</span>
-            </a>
-            <a href="artistes.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Artistes</span>
-            </a>
-            <a href="programme.html" class="nav-item">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Programme</span>
-            </a>
-            <a href="infos.html" class="nav-item active">
-                <span class="nav-icon"></span>
-                <span class="nav-label">Infos</span>
-            </a>
-        </nav>
-    </div>
-
     <script src="infos.js"></script>
  <footer>
             <div class="footer-content">
@@ -268,11 +310,23 @@
                     <a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-instagram" aria-label="Instagram"></a>
                     <a href="https://www.twitter.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-twitter" aria-label="Twitter"></a>
                     <a href="https://www.youtube.com" target="_blank" rel="noopener noreferrer" class="social-icon icon-youtube" aria-label="YouTube"></a>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p class="copyright">© 2025 Les rives du territoire. Tous droits réservés.</p>
-            </div>
-        </footer>
-    </body>
-</html>
+                    <div class="tarif-cadrans-grid">
+                      <div class="tarif-cadran">
+                        <div class="tarif-titre">Pass 1 jour</div>
+                        <div class="tarif-prix">30€</div>
+                        <div class="tarif-desc">Accès à toutes les scènes<br>1 journée complète<br>Vestiaire gratuit</div>
+                        <button class="buy-btn">Acheter</button>
+                      </div>
+                      <div class="tarif-cadran">
+                        <div class="tarif-titre">Pass 2 jours</div>
+                        <div class="tarif-prix">65€</div>
+                        <div class="tarif-desc">Accès à toutes les scènes<br>2 jours complets<br>Vestiaire gratuit<br>Réduction restauration 10%</div>
+                        <button class="buy-btn">Acheter</button>
+                      </div>
+                      <div class="tarif-cadran">
+                        <div class="tarif-titre">VIP Pass</div>
+                        <div class="tarif-prix">120€</div>
+                        <div class="tarif-desc">Accès VIP toutes scènes<br>Festival complet (4 jours)<br>Vestiaire privatif<br>Backstage access<br>Bar et restauration offerts<br>Parking réservé</div>
+                        <button class="buy-btn">Acheter</button>
+                      </div>
+                    </div>
