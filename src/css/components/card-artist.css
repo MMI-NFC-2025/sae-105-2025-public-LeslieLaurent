@@ -51,19 +51,19 @@
 }
 
 .photo-sofia {
-    background-image: url("/assets/Media-image/HomePage/SofiaIsella.jpg");
+    background-image: url("./assets/Media-image/HomePage/SofiaIsella.jpg");
 }
 
 .photo-arctic {
-    background-image: url("/assets/Media-image/HomePage/ArticMonkeys.jpg");
+    background-image: url("./assets/Media-image/HomePage/ArticMonkeys.jpg");
 }
 
 .photo-billie {
-    background-image: url("/assets/Media-image/HomePage/BillieEillish.jpg");
+    background-image: url("./assets/Media-image/HomePage/BillieEillish.jpg");
 }
 
 .photo-dua {
-    background-image: url("/assets/Media-image/HomePage/DuaLipa.jpg");
+    background-image: url("./assets/Media-image/HomePage/DuaLipa.jpg");
 }
 
 .artist-name {

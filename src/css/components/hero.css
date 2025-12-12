@@ -12,7 +12,7 @@
     align-items: center;
     background-image: 
         linear-gradient(135deg, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
-        url("/assets/Media-image/HomePage/festival-hp.jpg");
+        url("./assets/Media-image/HomePage/festival-hp.jpg");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;

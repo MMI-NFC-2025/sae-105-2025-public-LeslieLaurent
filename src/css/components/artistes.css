@@ -136,27 +136,27 @@
 }
 
 .artist-image.sofia-image {
-    background-image: url('/assets/Media-image/HomePage/SofiaIsella.jpg');
+    background-image: url('./assets/Media-image/HomePage/SofiaIsella.jpg');
 }
 
 .artist-image.arctic-image {
-    background-image: url('/assets/Media-image/HomePage/ArticMonkeys.jpg');
+    background-image: url('./assets/Media-image/HomePage/ArticMonkeys.jpg');
 }
 
 .artist-image.billie-image {
-    background-image: url('/assets/Media-image/HomePage/BillieEillish.jpg');
+    background-image: url('./assets/Media-image/HomePage/BillieEillish.jpg');
 }
 
 .artist-image.dua-image {
-    background-image: url('/assets/Media-image/HomePage/DuaLipa.jpg');
+    background-image: url('./assets/Media-image/HomePage/DuaLipa.jpg');
 }
 
 .artist-image.lennon-image {
-    background-image: url('/assets/Media-image/HomePage/LennonStella.jpg');
+    background-image: url('./assets/Media-image/HomePage/LennonStella.jpg');
 }
 
 .artist-image.ricci-image {
-    background-image: url('/assets/Media-image/HomePage/Ricci.jpg');
+    background-image: url('./assets/Media-image/HomePage/Ricci.jpg');
 }
 
 .artist-image.voltage-image {
@@ -164,7 +164,7 @@
 }
 
 .artist-image.mia-image {
-    background-image: url('/assets/Media-image/HomePage/MiaLyss.jpg');
+    background-image: url('./assets/Media-image/HomePage/MiaLyss.jpg');
 }
 
 .artistes-page .favorite-btn {

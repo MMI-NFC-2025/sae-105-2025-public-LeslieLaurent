@@ -27,22 +27,22 @@
 }
 
 .logo-leclerc {
-    background-image: url("/assets/Media-image/HomePage/E.Leclerc-Logo.png");
+    background-image: url("./assets/Media-image/HomePage/E.Leclerc-Logo.png");
     background-size: 100%;
 }
 
 .logo-levis {
-    background-image: url("/assets/Media-image/HomePage/Levis.png");
+    background-image: url("./assets/Media-image/HomePage/Levis.png");
     background-size: 100%;
 }
 
 .logo-orange {
-    background-image: url("/assets/Media-image/HomePage/orange.png");
+    background-image: url("./assets/Media-image/HomePage/orange.png");
     background-size: 100%;
 }
 
 .logo-miecaline {
-    background-image: url("/assets/Media-image/HomePage/Miecaline.webp");
+    background-image: url("./assets/Media-image/HomePage/Miecaline.webp");
     background-size: 45%;
 }
 
