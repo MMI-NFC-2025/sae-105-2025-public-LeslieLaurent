@@ -3,11 +3,11 @@
 
 À compléter :
 
-- NOM :
-- PRÉNOM :
-- GROUPE :
-- URL du site :
-- URL FIGMA :
+- NOM : Laurent 
+- PRÉNOM : Leslie
+- GROUPE :A1
+- URL du site : http://lesrivesduterritoire.leslie-laurent.fr/
+- URL FIGMA : https://www.figma.com/design/5VlvBJnrMY215AmAChjrTX/SAE105_LAURENT_Leslie?node-id=1-2&t=RzXdJP9g5crnIcZa-1 
 
 ## Sujet
 
