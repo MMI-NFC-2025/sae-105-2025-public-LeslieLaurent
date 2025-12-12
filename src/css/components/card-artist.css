@@ -34,6 +34,10 @@
     background: linear-gradient(135deg, rgba(115, 175, 111, 0.25), rgba(193, 229, 159, 0.35));
 }
 
+.artist-card.orange {
+    background: linear-gradient(135deg, rgba(255, 189, 249, 0.555), rgba(201, 52, 122, 0.35));
+}
+
 .artist-photo {
     width: 70px;
     height: 70px;

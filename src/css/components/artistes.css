@@ -124,7 +124,6 @@
     }
 }
 
-/* Image wrapper pour positionner le coeur */
 .artist-image {
     width: 80px;
     height: 80px;
@@ -221,7 +220,6 @@
     line-height: 1.2;
 }
 
-/* Date avec icône calendrier */
 .artist-date {
     font-size: 15px;
     color: #5f6368;
