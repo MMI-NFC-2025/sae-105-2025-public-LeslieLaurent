@@ -145,19 +145,19 @@
 }
 
 .event-icon.icon-opening {
-    background-image: url("./assets/Media-image/Icon/Calendrier.svg");
+    background-image: url("../../../assets/Media-image/Icon/Calendrier.svg");
 }
 
 .event-icon.icon-headliners {
-    background-image: url("./assets/Media-image/Icon/etoile.svg");
+    background-image: url("../../../assets/Media-image/Icon/etoile.svg");
 }
 
 .event-icon.icon-multigenres {
-    background-image: url("./assets/Media-image/Icon/musiquelight.svg");
+    background-image: url("../../../assets/Media-image/Icon/musiquelight.svg");
 }
 
 .event-icon.icon-finale {
-    background-image: url("./assets/Media-image/Icon/Vectorcoeur.svg");
+    background-image: url("../../../assets/Media-image/Icon/Vectorcoeur.svg");
 }
 
 .event-title {

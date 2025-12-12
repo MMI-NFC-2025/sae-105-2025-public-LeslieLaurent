@@ -167,7 +167,7 @@
     width: 28px !important;
     height: 28px !important;
     min-width: 28px !important;
-    background-image: url('./assets/Media-image/Icon/historiquelogo.svg');
+    background-image: url('../../../assets/Media-image/Icon/historiquelogo.svg');
     background-size: 22px 22px;
     background-position: center;
     background-repeat: no-repeat;
@@ -212,7 +212,7 @@
     width: 32px;
     height: 32px;
     min-width: 32px;
-    background-image: url('./assets/Media-image/Icon/historiquelogo.svg');
+    background-image: url('../../../assets/Media-image/Icon/historiquelogo.svg');
     background-size: 24px 24px;
     background-position: center;
     background-repeat: no-repeat;
@@ -464,19 +464,19 @@
 }
 
 .info-icon.icon-lieu {
-    background-image: url("./assets/Media-image/Icon/place.svg");
+    background-image: url("../../../assets/Media-image/Icon/place.svg");
 }
 
 .info-icon.icon-billetterie {
-    background-image: url("./assets/Media-image/Icon/billeterie.svg"); 
+    background-image: url("../../../assets/Media-image/Icon/billeterie.svg"); 
 }
 
 .info-icon.icon-hebergement {
-    background-image: url("./assets/Media-image/Icon/hebergement.svg");
+    background-image: url("../../../assets/Media-image/Icon/hebergement.svg");
 }
 
 .info-icon.icon-restauration {
-    background-image: url("./assets/Media-image/Icon/restauration.svg");
+    background-image: url("../../../assets/Media-image/Icon/restauration.svg");
 }
 
 .info-content h3 {

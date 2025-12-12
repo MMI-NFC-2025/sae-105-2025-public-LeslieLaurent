@@ -190,7 +190,7 @@
 .download-icon {
     width: 20px;
     height: 20px;
-    background-image: url("./assets/Media-image/Icon/téléchargement.svg");
+    background-image: url("../../../assets/Media-image/Icon/téléchargement.svg");
     background-size: contain;
     background-position: center;
     background-repeat: no-repeat;

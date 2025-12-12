@@ -102,19 +102,19 @@ footer {
 }
 
 .icon-facebook {
-    background-image: url("./assets/Media-image/Icon/fcb.svg");
+    background-image: url("../../../assets/Media-image/Icon/fcb.svg");
 }
 
 .icon-instagram {
-    background-image: url("./assets/Media-image/Icon/insta.svg");
+    background-image: url("../../../assets/Media-image/Icon/insta.svg");
 }
 
 .icon-twitter {
-    background-image: url("./assets/Media-image/Icon/twitter.svg");
+    background-image: url("../../../assets/Media-image/Icon/twitter.svg");
 }
 
 .icon-youtube {
-    background-image: url("./assets/Media-image/Icon/ytb.svg");
+    background-image: url("../../../assets/Media-image/Icon/ytb.svg");
 }
 
 .footer-bottom {
